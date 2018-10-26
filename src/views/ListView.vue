@@ -4,6 +4,7 @@
     <infinite-loading @infinite="infiniteHandler" ref="infiniteLoading">
       <loading slot="spinner"></loading>
     </infinite-loading>
+
   </div>
 </template>
 
