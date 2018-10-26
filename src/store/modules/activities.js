@@ -1,6 +1,7 @@
 import request from 'superagent'
 import jsonp from 'superagent-jsonp'
-import http from '../../libs/Http'
+import Vue from 'vue'
+
 const state = {
   events: [],
   temp: [],
@@ -22,7 +23,7 @@ const actions = {
    * count: 3 default
    */
   loadMore ({commit, state}) {
-    http.get('/api/event/list', {
+    Vue.prototype.$http.get('/api/event/list', {
       params:{
         'loc': '108288',
         'start': state.skip,
@@ -30,14 +31,14 @@ const actions = {
       }
     })
       .then((response) => {
-        // this.showToast('请求成功')
+        Vue.prototype.showToast('请求成功')
         commit({
           type: 'loadMore',
           res: response.data.events
         })
         console.log('成功返回：', response.data)
       }, (error) => {
-        // this.showToast('请求失败：' + error);
+        Vue.prototype.showToast('请求失败：' + error);
       })
 
    /* request

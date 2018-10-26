@@ -8,7 +8,6 @@
 </template>
 
 <script>
-  import http from "../libs/Http.js";
   import crypto from 'crypto'
   import { XButton, Box} from 'vux'
   export default {
@@ -45,7 +44,7 @@
         md5.update(API_KEY + X_CurTime + X_Param);
         var X_CheckSum = md5.digest('hex');
 
-        http.post('/aiui', "i leave application！！", {
+        this.$http.post('/aiui', "i leave application！！", {
           headers: {
             'X-Param': X_Param,
             'X-CurTime': X_CurTime,
