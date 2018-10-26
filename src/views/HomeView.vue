@@ -7,6 +7,10 @@
     <group title="Vux的例子">
       <cell title="TabbarView" :link="{path:'/TabbarView'}" is-link></cell>
     </group>
+
+    <group title="科大讯飞的例子">
+      <cell title="科大讯飞" :link="{path:'/XunFeiTest'}" is-link></cell>
+    </group>
   </div>
 </template>
 

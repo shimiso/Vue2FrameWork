@@ -1,6 +1,6 @@
 import request from 'superagent'
 import jsonp from 'superagent-jsonp'
-
+import http from '../../libs/Http'
 const state = {
   events: [],
   temp: [],
@@ -22,7 +22,25 @@ const actions = {
    * count: 3 default
    */
   loadMore ({commit, state}) {
-    request
+    http.get('/api/event/list', {
+      params:{
+        'loc': '108288',
+        'start': state.skip,
+        'count':'3'
+      }
+    })
+      .then((response) => {
+        // this.showToast('请求成功')
+        commit({
+          type: 'loadMore',
+          res: response.data.events
+        })
+        console.log('成功返回：', response.data)
+      }, (error) => {
+        // this.showToast('请求失败：' + error);
+      })
+
+   /* request
       .get('https://api.douban.com/v2/event/list?loc=108288&start=' +
         state.skip + '&count=3')
       .use(jsonp({timeout: 10000}))
@@ -33,7 +51,7 @@ const actions = {
             res: res.body.events
           })
         }
-      })
+      })*/
   }
 }
 

@@ -10,7 +10,22 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/aiui': {
+        target: 'http://openapi.xfyun.cn/v2/aiui',//设置你调用的接口域名和端口号
+        changeOrigin: true, //跨域
+        pathRewrite: {
+          '^/aiui': '/' //这里理解成用‘/api’代替target里面的地址，
+        }
+      },
+      '/api': {
+        target: 'https://api.douban.com/v2',//设置你调用的接口域名和端口号
+        changeOrigin: true, //跨域
+        pathRewrite: {
+          '^/api': '/' //这里理解成用‘/api’代替target里面的地址，
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

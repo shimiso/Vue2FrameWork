@@ -4,6 +4,7 @@ import TabbarView from '../views/TabbarView'
 import ListView from '../views/ListView'
 import HomeView from '../views/HomeView'
 import TabitemView from '../views/TabitemView'
+import XunFeiTest from '../views/XunFeiTest'
 
 Vue.use(Router)
 
@@ -38,6 +39,12 @@ export default new Router({
       path: '/ListView',
       name: 'ListView',
       component: ListView
+    }
+    ,
+    {
+      path: '/XunFeiTest',
+      name: 'XunFeiTest',
+      component: XunFeiTest
     }
   ]
 })
