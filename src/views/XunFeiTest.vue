@@ -44,7 +44,7 @@
         md5.update(API_KEY + X_CurTime + X_Param);
         var X_CheckSum = md5.digest('hex');
 
-        this.$http.post('/aiui', "i leave application！！", {
+        this.$http.post(process.env.AIUI_HOST, "i leave application！！", {
           headers: {
             'X-Param': X_Param,
             'X-CurTime': X_CurTime,

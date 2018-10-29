@@ -3,7 +3,7 @@ import axios from 'axios'
 import qs from 'qs'
 // 全局配置
 axios.defaults.timeout = 5000
-axios.defaults.baseURL = process.env.BASE_URL
+// axios.defaults.baseURL = process.env.BASE_URL
 
 // 请求拦截（配置发送请求的信息）
 axios.interceptors.request.use(config => {

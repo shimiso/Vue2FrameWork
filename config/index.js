@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/',
     proxyTable: {
       '/aiui': {
         target: 'http://openapi.xfyun.cn/v2/aiui',//设置你调用的接口域名和端口号
