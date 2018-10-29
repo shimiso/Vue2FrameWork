@@ -23,7 +23,7 @@ const actions = {
    * count: 3 default
    */
   loadMore ({commit, state}) {
-    Vue.prototype.$http.get(process.env.DOUBAN_HOST+'/event/list', {
+    Vue.prototype.$http.get('/douban/event/list', {
       params:{
         'loc': '108288',
         'start': state.skip,
