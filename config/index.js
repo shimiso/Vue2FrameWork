@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/aiui': {
-        target: 'http://openapi.xfyun.cn/v2/aiui',//设置你调用的接口域名和端口号
+        target: 'https://openapi.xfyun.cn/v2/aiui',//设置你调用的接口域名和端口号
         changeOrigin: true, //跨域
         pathRewrite: {
           '^/aiui': '/' //这里理解成用‘/api’代替target里面的地址，
