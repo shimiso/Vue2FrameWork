@@ -11,6 +11,10 @@
     <group title="科大讯飞的例子">
       <cell title="科大讯飞" :link="{path:'/XunFeiTest'}" is-link></cell>
     </group>
+
+      <group title="上拉刷新，下拉加载">
+      <cell title="LoadMore" :link="{path:'/LoadMore'}" is-link></cell>
+    </group>
   </div>
 </template>
 

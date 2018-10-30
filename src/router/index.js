@@ -5,7 +5,7 @@ import ListView from '../views/ListView'
 import HomeView from '../views/HomeView'
 import TabitemView from '../views/TabitemView'
 import XunFeiTest from '../views/XunFeiTest'
-
+import LoadMore from '../views/LoadMore'
 Vue.use(Router)
 
 export default new Router({
@@ -45,6 +45,12 @@ export default new Router({
       path: '/XunFeiTest',
       name: 'XunFeiTest',
       component: XunFeiTest
+    }
+    ,
+    {
+      path: '/LoadMore',
+      name: 'LoadMore',
+      component: LoadMore
     }
   ]
 })

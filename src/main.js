@@ -11,9 +11,13 @@ import objectAssign from 'object-assign'
 import store from './store'
 import http from '@/libs/Http.js'
 import { LocalePlugin, AlertPlugin, BusPlugin, ConfigPlugin, ToastPlugin, ConfirmPlugin, LoadingPlugin } from 'vux'
+import MuseUI from 'muse-ui';
+import 'muse-ui/dist/muse-ui.css';
+
 
 // 定义全局变量
 Vue.prototype.$http = http
+Vue.use(MuseUI); //按需引入的上拉刷新下拉加载
 Vue.use(Vuex)
 Vue.use(ToastPlugin)
 Vue.use(ConfirmPlugin)
