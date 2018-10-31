@@ -1,8 +1,8 @@
 <template>
   <div style="height:100%;">
-    <x-header :left-options="{showBack: false}"
+    <x-header :left-options="{backText: ''}"
               :right-options="{showMore: true}"
-              @on-click-more="showMenu = true">with more menu</x-header>
+              @on-click-more="showMenu = true">TabbarView</x-header>
 
     <!-- remember to import BusPlugin in main.js if you use components: x-img and sticky -->
     <transition

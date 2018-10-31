@@ -1,11 +1,7 @@
 <template>
   <div>
     <!--标题-->
-    <p class="header">
-      <router-link class="btn-left" to="/">main</router-link>
-      <span>新闻列表</span>
-      <router-link class="btn-right" to="listProducts">list-products</router-link>
-    </p>
+    <x-header :left-options="{backText: ''}">新闻列表</x-header>
     <!--滑动区域-->
     <div ref="mescroll" class="mescroll">
       <div>
@@ -25,9 +21,11 @@
 // 引入mescroll.min.js和mescroll.min.css
 import MeScroll from 'mescroll.js'
 import 'mescroll.js/mescroll.min.css'
+import { XHeader } from 'vux'
 
 export default {
   name: 'listNews',
+  components: { XHeader },
   data () {
     return {
       mescroll: null,

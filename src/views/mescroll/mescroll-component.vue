@@ -1,10 +1,7 @@
 <template>
   <div>
     <!--标题-->
-    <p class="header">
-      <router-link class="btn-left" to="/">main</router-link>
-      MeScroll组件,强烈推荐使用
-    </p>
+    <x-header :left-options="{backText: ''}">MeScroll组件,强烈推荐使用</x-header>
     <!--滑动区域-->
     <mescroll-vue ref="mescroll" :up="mescrollUp" @init="mescrollInit">
       <!--模拟的轮播,菜单 可在down.callback中配置刷新轮播数据-->
@@ -31,13 +28,15 @@
 <script>
 // 引入mescroll的vue组件
 import MescrollVue from 'mescroll.js/mescroll.vue'
+import { XHeader } from 'vux'
 // 模拟数据
 import mockData from '../../mock/pdlist'
 
 export default {
   name: 'mescrollComponent',
   components: {
-    MescrollVue
+    MescrollVue,
+    XHeader
   },
   data () {
     return {

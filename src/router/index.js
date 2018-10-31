@@ -9,6 +9,8 @@ import listNews from '../views/mescroll/list-news'
 import mescrollOptions from '../views/mescroll/mescroll-options'
 import listProducts from '../views/mescroll/list-products'
 import mescrollComponent from '../views/mescroll/mescroll-component'
+import DetailView from '../views/DetailView'
+
 
 Vue.use(Router)
 
@@ -59,6 +61,10 @@ export default new Router({
       path: '/mescrollComponent',
       name: 'mescrollComponent',
       component: mescrollComponent
+    }, {
+      path: 'detail/:id',
+      name: 'DetailView',
+      component: DetailView
     }
   ]
 })

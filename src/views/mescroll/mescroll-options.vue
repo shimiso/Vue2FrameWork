@@ -1,10 +1,7 @@
 <template>
   <div>
     <!--标题-->
-    <p class="header">
-      <router-link class="btn-left" to="/">main</router-link>
-      MeScroll所有配置项 (详见代码)
-    </p>
+    <x-header :left-options="{backText: ''}">MeScroll所有配置项 (详见代码)</x-header>
     <!--滑动区域-->
     <div id="mescroll" class="mescroll">
       <!--模拟的轮播,菜单 可在down.callback中配置刷新轮播数据-->
@@ -32,11 +29,13 @@
 // 引入mescroll.min.js和mescroll.min.css
 import MeScroll from 'mescroll.js'
 import 'mescroll.js/mescroll.min.css'
+import { XHeader } from 'vux'
 // 模拟数据
 import mockData from '../../mock/pdlist'
 
 export default {
   name: 'mescrollOptions',
+  components: { XHeader },
   data () {
     return {
       mescroll: null, // mescroll实例对象

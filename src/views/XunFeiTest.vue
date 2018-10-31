@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <x-header :left-options="{backText: ''}">测试科大讯飞接口</x-header>
     <box gap="10px 10px">
-      <x-button @click.native="xfyun">测试科大讯飞接口</x-button>
+      <x-button @click.native="xfyun">点击测试</x-button>
     </box>
     <p>{{json}}</p>
   </div>
@@ -9,7 +10,7 @@
 
 <script>
   import crypto from 'crypto'
-  import { XButton, Box} from 'vux'
+  import { XButton, Box, XHeader} from 'vux'
   export default {
     data() {
       return {
@@ -18,7 +19,8 @@
     },
     components: {
       XButton,
-      Box
+      Box,
+      XHeader
     },
     created: function () {
 

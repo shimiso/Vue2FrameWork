@@ -2,6 +2,7 @@
   <div>
     <group title="Axios的例子">
       <cell title="ListViewDemo" :link="{path:'/ListView'}" is-link></cell>
+      <cell title="DetailViewDemo" :link="{name: 'DetailView', params: { id: 31415985 }}" is-link></cell>
     </group>
 
     <group title="Vux的例子">

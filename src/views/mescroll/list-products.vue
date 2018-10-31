@@ -1,11 +1,7 @@
 <template>
   <div>
     <!--模拟的标题-->
-    <p class="header">
-      <router-link class="btn-left" to="/">main</router-link>
-      商品列表
-      <router-link class="btn-right" to="listNews">list-news</router-link>
-    </p>
+    <x-header :left-options="{backText: ''}">商品列表</x-header>
     <!--滑动区域-->
     <div ref="mescroll" class="mescroll">
       <div class="notice">
@@ -29,12 +25,14 @@
 // 引入mescroll.min.js和mescroll.min.css
 import MeScroll from 'mescroll.js'
 import 'mescroll.js/mescroll.min.css'
+import { XHeader } from 'vux'
 // 模拟数据
 import mockData from '../../mock/pdlist'
 import mockDataEdit from '../../mock/pdlistEdit'
 
 export default {
   name: 'listProducts',
+  components: { XHeader },
   data () {
     return {
       mescroll: null, // mescroll实例对象
