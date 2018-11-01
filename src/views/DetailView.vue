@@ -1,7 +1,7 @@
 <template>
  <div class="wrap">
-   <loading :pageType="type" v-if="isShow"></loading>
-   <div class="detail-view has-header" v-if="!isShow">
+   <loading :pageType="type" ></loading>
+   <div class="detail-view has-header">
      <x-header :left-options="{backText: ''}">DetailViewDemo</x-header>
      <template>
        <div class="info">
@@ -68,8 +68,9 @@ export default {
     return {
       isShow:false,
       type:{
-        pageType:"customer",
-        text:"用户自定义！"
+        isShow:false, //是否显示
+        pageType:"customer", //显示类型
+        text:"用户自定义！"  // 用户自定义显示文字
       },
     }
   },

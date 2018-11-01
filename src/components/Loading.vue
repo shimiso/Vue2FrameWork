@@ -1,22 +1,25 @@
 <template>
-  <div class="loading">
-    <div class="error" v-if="pageType.pageType == 'error'">
-      <img src="../assets/loading_green.gif" alt="loading">
-      <Error></Error>
-    </div>
-    <div class="networkerr" v-if="pageType.pageType == 'networkerr'">
-      <img src="../assets/loading_green.gif" alt="loading">
-      <Empty></Empty>
-    </div>
-    <div class="empty" v-if="pageType.pageType == 'empty'">
-      <img src="../assets/loading_green.gif" alt="loading">
-      <NetworkErr></NetworkErr>
-    </div>
-    <div class="empty" v-if="pageType.pageType == 'customer'">
-      <img src="../assets/loading_green.gif" alt="loading">
-      <p>{{pageType.text}}</p>
+  <div class="wrap" v-if="pageType.isShow">
+    <div class="loading">
+      <div class="error" v-if="pageType.pageType == 'error'">
+        <img src="../assets/loading_green.gif" alt="loading">
+        <Error></Error>
+      </div>
+      <div class="networkerr" v-if="pageType.pageType == 'networkerr'">
+        <img src="../assets/loading_green.gif" alt="loading">
+        <Empty></Empty>
+      </div>
+      <div class="empty" v-if="pageType.pageType == 'empty'">
+        <img src="../assets/loading_green.gif" alt="loading">
+        <NetworkErr></NetworkErr>
+      </div>
+      <div class="empty" v-if="pageType.pageType == 'customer'">
+        <img src="../assets/loading_green.gif" alt="loading">
+        <p>{{pageType.text}}</p>
+      </div>
     </div>
   </div>
+
 
 </template>
 
@@ -35,6 +38,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrap{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+}
 .loading {
   margin: 2rem;
   text-align: center;
