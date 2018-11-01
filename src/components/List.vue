@@ -1,50 +1,132 @@
 <template>
-  <div class="list">
-    <template v-if="mold === 'thumbnail'" v-for="item in items">
-      <router-link
-        class="thumbnail"
-        :to="{name: 'DetailView', params: { id: item.id }}">
-        <div class="content">
-          <img :src="item.image_hlarge" alt="cover">
-          <h3>{{item.title}}</h3>
-          <p>{{item.content | subStr}}</p>
-        </div>
-        <div class="author">
-          <span class="name">{{item.category_name}}</span>
-          <span class="label" v-if="item.subcategory_name">
+  <div class="list" id="dataList">
+    <mescroll-vue ref="mescroll" :up="mescrollUp" :down="mescrollDown" @init="mescrollInit" class="mescroll">
+      <template v-if="mold === 'thumbnail'" v-for="item in items" >
+        <router-link
+          class="thumbnail"
+          :to="{name: 'DetailView', params: { id: item.id }}">
+          <div class="content">
+            <img :src="item.image_hlarge" alt="cover">
+            <h3>{{item.title}}</h3>
+            <p>{{item.content | subStr}}</p>
+          </div>
+          <div class="author">
+            <span class="name">{{item.category_name}}</span>
+            <span class="label" v-if="item.subcategory_name">
             本活动来自栏目 {{item.subcategory_name}}
           </span>
-        </div>
-      </router-link>
-    </template>
-    <template v-if="mold === 'basic'">
-      <ul class="basic">
-        <li v-for="item in items">
-          <a href="#">
-            <h3>{{item.title}}</h3>
-            <div class="info">{{item.comments}}</div>
-          </a>
-        </li>
-      </ul>
-    </template>
+          </div>
+        </router-link>
+      </template>
+      <template v-if="mold === 'basic'">
+        <ul class="basic">
+          <li v-for="item in items">
+            <a href="#">
+              <h3>{{item.title}}</h3>
+              <div class="info">{{item.comments}}</div>
+            </a>
+          </li>
+        </ul>
+      </template>
+    </mescroll-vue>
+
   </div>
 </template>
 
 <script>
+import MescrollVue from 'mescroll.js/mescroll.vue'
+import Vue from 'vue'
 export default {
   name: 'list',
+  components: {
+    MescrollVue
+  },
   props: {
     mold: {
       type: String,
       default: 'basic'
-    },
-    items: {
+    }
+    /*items: {
       type: Array,
       required: true
-    }
+    }*/
   },
   data () {
+    let _this = this
     return {
+      mescroll: null,
+      mescrollDown: {
+        use: true,
+        callback: this.downCallback
+      },
+      mescrollUp: {
+        use: false,
+        callback: this.upCallback,
+        page: {
+          num: 0, // 当前页码,默认0,回调之前会加1,即callback(page)会从1开始
+          size: 3
+        },
+        empty: {
+          warpId: 'dataList', // 父布局的id;
+          icon: './static/mescroll/mescroll-empty.png', // 图标,支持网络图
+          tip: '暂无相关数据~', // 提示
+          btntext: '去逛逛 >', // 按钮,默认""
+          btnClick () { // 点击按钮的回调,默认null
+            _this.upCallback(_this.mescrollUp.page, _this.mescroll)
+            alert('点击了按钮,具体逻辑自行实现')
+          }
+        }
+      },
+      items: []
+    }
+  },
+  methods: {
+    mescrollInit (mescroll) {
+      this.mescroll = mescroll
+    },
+    downCallback (mescroll) {
+      this.getDownList(mescroll)
+    },
+    upCallback (page, mescroll) {
+      this.getUpList(page, mescroll)
+    },
+    getUpList (page, mescroll) {
+      Vue.prototype.$http.get('/douban/event/list', {
+        params: {
+          'loc': '108288',
+          count: this.mescrollUp.page.size
+        }
+      }).then((response) => {
+//        response.data.events.length = 0调试数据为空点击去逛逛btn
+// 重新设置empty里面的数据之后需要手动调用mescroll.showEmpty()
+        if (page.num === 1) this.items = []
+        // 把请求到的数据添加到列表
+        this.items = this.items.concat(response.data.events)
+        // 数据渲染成功后,隐藏下拉刷新的状态
+        this.$nextTick(() => {
+          mescroll.endSuccess(response.data.events.length)
+        })
+      }).catch((error) => {
+        mescroll.endErr()
+      })
+    },
+    getDownList(mescroll) {
+      let i = 1
+      let _this = this
+      Vue.prototype.$http.get('/douban/event/list', {
+        params: {
+          'loc': '108288',
+          count: i
+        }
+      }).then((response) => {
+        _this.items = response.data.events
+        // 数据渲染成功后,隐藏下拉刷新的状态
+        _this.$nextTick(() => {
+          mescroll.endSuccess(response.data.events.length)
+        })
+      }).catch((error) => {
+        mescroll.endErr()
+      })
     }
   },
   filters: {
@@ -58,6 +140,12 @@ export default {
 
 <style lang='scss' scoped>
 .list {
+  .mescroll {
+    position: fixed;
+    top: 44px;
+    bottom: 0;
+    height: auto;
+  }
   .thumbnail {
     position: relative;
     display: block;
