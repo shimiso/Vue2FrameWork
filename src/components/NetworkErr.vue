@@ -1,13 +1,13 @@
 <template>
- <div>
-    <p>服务器发生未知异常!</p>
+  <div>
+    <p>网络君发生异常!</p>
     <p>请轻触重试</p>
- </div>
+  </div>
 </template>
 
 <script>
     export default {
-        name: "error"
+        name: "NetworkErr"
     }
 </script>
 
