@@ -1,36 +1,35 @@
 <template>
-  <div class="list" id="dataList">
-    <mescroll-vue ref="mescroll" :up="mescrollUp" :down="mescrollDown" @init="mescrollInit" class="mescroll">
-      <template v-if="mold === 'thumbnail'" v-for="item in items" >
-        <router-link
-          class="thumbnail"
-          :to="{name: 'DetailView', params: { id: item.id }}">
-          <div class="content">
-            <img :src="item.image_hlarge" alt="cover">
+  <mescroll-vue ref="mescroll" :up="mescrollUp" :down="mescrollDown" @init="mescrollInit" class="mescroll">
+    <div class="list" id="dataList">
+    <template v-if="mold === 'thumbnail'" v-for="item in items" >
+      <router-link
+        class="thumbnail"
+        :to="{name: 'DetailView', params: { id: item.id }}">
+        <div class="content">
+          <img :src="item.image_hlarge" alt="cover">
+          <h3>{{item.title}}</h3>
+          <p>{{item.content | subStr}}</p>
+        </div>
+        <div class="author">
+          <span class="name">{{item.category_name}}</span>
+          <span class="label" v-if="item.subcategory_name">
+          本活动来自栏目 {{item.subcategory_name}}
+        </span>
+        </div>
+      </router-link>
+    </template>
+    <template v-if="mold === 'basic'">
+      <ul class="basic">
+        <li v-for="item in items">
+          <a href="#">
             <h3>{{item.title}}</h3>
-            <p>{{item.content | subStr}}</p>
-          </div>
-          <div class="author">
-            <span class="name">{{item.category_name}}</span>
-            <span class="label" v-if="item.subcategory_name">
-            本活动来自栏目 {{item.subcategory_name}}
-          </span>
-          </div>
-        </router-link>
-      </template>
-      <template v-if="mold === 'basic'">
-        <ul class="basic">
-          <li v-for="item in items">
-            <a href="#">
-              <h3>{{item.title}}</h3>
-              <div class="info">{{item.comments}}</div>
-            </a>
-          </li>
-        </ul>
-      </template>
-    </mescroll-vue>
-
-  </div>
+            <div class="info">{{item.comments}}</div>
+          </a>
+        </li>
+      </ul>
+    </template>
+    </div>
+  </mescroll-vue>
 </template>
 
 <script>
@@ -46,10 +45,6 @@ export default {
       type: String,
       default: 'basic'
     }
-    /*items: {
-      type: Array,
-      required: true
-    }*/
   },
   data () {
     let _this = this
@@ -97,8 +92,8 @@ export default {
           count: this.mescrollUp.page.size
         }
       }).then((response) => {
-//        response.data.events.length = 0调试数据为空点击去逛逛btn
-// 重新设置empty里面的数据之后需要手动调用mescroll.showEmpty()
+      //  response.data.events.length = 0调试数据为空点击去逛逛btn
+      // 重新设置empty里面的数据之后需要手动调用mescroll.showEmpty()
         if (page.num === 1) this.items = []
         // 把请求到的数据添加到列表
         this.items = this.items.concat(response.data.events)
@@ -106,11 +101,11 @@ export default {
         this.$nextTick(() => {
           mescroll.endSuccess(response.data.events.length)
         })
-      }).catch((error) => {
+      }).catch(() => {
         mescroll.endErr()
       })
     },
-    getDownList(mescroll) {
+    getDownList (mescroll) {
       let i = 1
       let _this = this
       Vue.prototype.$http.get('/douban/event/list', {
@@ -124,7 +119,7 @@ export default {
         _this.$nextTick(() => {
           mescroll.endSuccess(response.data.events.length)
         })
-      }).catch((error) => {
+      }).catch(() => {
         mescroll.endErr()
       })
     }
