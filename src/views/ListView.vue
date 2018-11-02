@@ -1,70 +1,54 @@
 <template>
-  <div class="home-view has-header">
+  <div class="home-view has-header" id="">
     <x-header :left-options="{backText: ''}">ListViewDemo</x-header>
-    <div class="list" id="dataList">
-      <mescroll-vue ref="mescroll" :up="mescrollUp" :down="mescrollDown" @init="mescrollInit" class="mescroll">
-        <template v-if="mold === 'thumbnail'" v-for="item in items" >
-          <router-link
-            class="thumbnail"
-            :to="{name: 'DetailView', params: { id: item.id }}">
-            <div class="content">
-              <img :src="item.image_hlarge" alt="cover">
-              <h3>{{item.title}}</h3>
-              <p>{{item.content | subStr}}</p>
-            </div>
-            <div class="author">
-              <span class="name">{{item.category_name}}</span>
-              <span class="label" v-if="item.subcategory_name">
-            本活动来自栏目 {{item.subcategory_name}}
-          </span>
-            </div>
-          </router-link>
-        </template>
-        <template v-if="mold === 'basic'">
-          <ul class="basic">
-            <li v-for="item in items">
-              <a href="#">
+    <mescroll-vue ref="mescroll" :up="mescrollUp" @init="mescrollInit">
+      <div class="list" id="dataList">
+          <template v-if="mold === 'thumbnail'" v-for="item in items" >
+            <router-link
+              class="thumbnail"
+              :to="{name: 'DetailView', params: { id: item.id }}">
+              <div class="content">
+                <img :src="item.image_hlarge" alt="cover">
                 <h3>{{item.title}}</h3>
-                <div class="info">{{item.comments}}</div>
-              </a>
-            </li>
-          </ul>
-        </template>
-      </mescroll-vue>
-    </div>
-    <!--<list mold="thumbnail"></list>-->
-    <!--<list mold="thumbnail" :items="events"></list>
-    <infinite-loading @infinite="infiniteHandler" ref="infiniteLoading">
-      <loading slot="spinner"></loading>
-    </infinite-loading>-->
+                <p>{{item.content | subStr}}</p>
+              </div>
+              <div class="author">
+                <span class="name">{{item.category_name}}</span>
+                <span class="label" v-if="item.subcategory_name">
+                本活动来自栏目 {{item.subcategory_name}}
+              </span>
+              </div>
+            </router-link>
+          </template>
+          <template v-if="mold === 'basic'">
+            <ul class="basic">
+              <li v-for="item in items">
+                <a href="#">
+                  <h3>{{item.title}}</h3>
+                  <div class="info">{{item.comments}}</div>
+                </a>
+              </li>
+            </ul>
+          </template>
+      </div>
+    </mescroll-vue>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
 import MescrollVue from 'mescroll.js/mescroll.vue'
 import { XHeader } from 'vux'
-/*import { mapState, mapActions } from 'vuex'
-import infiniteLoading from 'vue-infinite-loading'*/
-//import List from '../components/List'
-//import Loading from '../components/Loading'
-
+import { mapState, mapActions } from 'vuex'
 export default {
   name: 'home-view',
   components: { XHeader, MescrollVue },
   data () {
-    let _this = this
+    var _this = this
+
     return {
       mold: 'thumbnail',
       mescroll: null,
-      mescrollDown: {
-        use: true, // 是否初始化下拉刷新，如果设为false,则下拉刷新不可用
-        auto: false, // 是否在初始化时以下拉刷新的方式自动加载第一页数据; 默认true
-        callback: this.downCallback // 下拉刷新回调函数
-      },
       mescrollUp: {
-        use: true, // 是否初始化上拉加载，如果设为false,则上拉加载不可用
-        auto: true, // 是否在初始化时以上拉加载的方式自动加载第一页数据; 默认true
         callback: this.upCallback, // 上拉加载回调函数
         page: {
           num: 0, // 当前页码,默认0,回调之前会加1,即callback(page)会从1开始
@@ -74,99 +58,34 @@ export default {
           warpId: 'dataList', // 父布局的id;
           icon: './static/mescroll/mescroll-empty.png', // 图标,支持网络图
           tip: '暂无相关数据~', // 提示
-          btntext: '3333去逛逛 >', // 按钮,默认""
+          btntext: '去逛逛 >', // 按钮,默认""
           btnClick () { // 点击按钮的回调,默认null
-            _this.upCallback(_this.mescrollUp.page, _this.mescroll) // 此处是点击去逛逛的时候重新请求上拉加载的方法
-            // alert('点击了按钮,具体逻辑自行实现')
+            // 请求失败后继续请求加载数据的接口
+            _this.upCallback(_this.mescrollUp, _this.mescroll) // 此处是点击去逛逛的时候重新请求上拉加载的方法
           }
         }
-      },
-      items: []
+      }
     }
   },
   computed: {
-    // Getting Vuex State from store/modules/activities
-    /*...mapState({
-      events: state => state.activities.events
-    })*/
+    ...mapState({
+      items: state => state.list.items
+    })
   },
   methods: {
     mescrollInit (mescroll) {
       this.mescroll = mescroll
     },
-    downCallback (mescroll) {
-      // 下拉刷新获取数据
-      this.getDownList(mescroll)
+    upCallback (mescrollUp, mescroll) {
+      let upParams = {
+        mescrollUp,
+        mescroll
+      }
+      this.getUpCallbackList(upParams)
     },
-    upCallback (page, mescroll) {
-      // 上拉加载获取数据
-      this.getUpList(page, mescroll)
-    },
-    getUpList (page, mescroll) {
-      var _this = this
-      Vue.prototype.$http.get('/douban/event/list', {
-        params: {
-          'loc': '108288',
-          count: this.mescrollUp.page.size
-        }
-      }).then((response) => {
-        // response.data = []如此设置为了模拟在第一屏中出现非数据为空的错误
-        if (!response.data.events) {
-          // 调用张松写的错误页面
-        }
-        // response.data.events.length = 0
-        if (response.data.events.length === 0) {
-          // 此处为了模拟项目中返回数据为空的情况，数据为空相关配置为data中的mescrollUp.empty,可以自行修改
-        } else {
-          // response.data.events.length = 0调试数据为空点击去逛逛btn
-          // 重新设置empty里面的数据之后需要手动调用mescroll.showEmpty()
-          if (page.num === 1) this.items = []
-          // 把请求到的数据添加到列表
-          this.items = this.items.concat(response.data.events)
-          // 数据渲染成功后,隐藏下拉刷新的状态
-        }
-        this.$nextTick(() => {
-          mescroll.endSuccess(response.data.events.length)
-        })
-      }).catch(() => {
-        // 联网异常,隐藏上拉和下拉的加载进度
-        mescroll.endErr()
-        // TODO调用网络异常组件
-      })
-    },
-    getDownList (mescroll) {
-      let i = 3
-      let _this = this
-      Vue.prototype.$http.get('/douban/event/list', {
-        params: {
-          'loc': '108288',
-          count: i
-        }
-      }).then((response) => {
-        // 渲染数据
-        _this.items = response.data.events
-        // 数据渲染成功后,隐藏下拉刷新的状态
-        _this.$nextTick(() => {
-          mescroll.endSuccess(response.data.events.length)
-        })
-      }).catch(() => {
-        // 联网异常,隐藏上拉和下拉的加载进度
-        mescroll.endErr()
-        // TODO调用网络异常组件
-
-      })
-    }
-    // Using vue-infinite-loading
-    /*infiniteHandler ($state) {
-      setTimeout(() => {
-        this.loadMore()
-        $state.loaded()
-      }, 5000)
-    },*/
-    // Dispatching Actions
-    /*...mapActions([
-      'loadMore'
-    ])*/
+    ...mapActions([
+      'getUpCallbackList'
+    ])
   },
   filters: {
     subStr: function (value) {
