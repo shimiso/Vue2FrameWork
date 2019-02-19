@@ -13,6 +13,10 @@
       <cell title="科大讯飞" :link="{path:'/XunFeiTest'}" is-link></cell>
     </group>
 
+    <group title="EvenBus测试例子">
+      <cell title="EvenBus测试例子" :value="evenBusData" :link="{path:'/EvenBusTest'}" is-link></cell>
+    </group>
+
     <group title="mescroll + vue 案例">
       <cell title="list-news 新闻列表" :link="{path:'/listNews'}" is-link><span class="tip">下拉刷新添加数据到列表顶部</span></cell>
       <cell title="list-products 商品列表" :link="{path:'/listProducts'}" is-link><span class="tip">下拉刷新重置列表数据</span></cell>
@@ -36,13 +40,22 @@
       Cell
     },
     data() {
-      return {}
+      return {
+        evenBusData:''
+      }
     },
-    methods: {},
-    mounted() {
+    methods: {
+      evenBusTest(params){
+        this.evenBusData = params
+        console.log(params)
+      }
     },
-    beforeDestroy() {
-    }
+    created () {
+      this.$vux && this.$vux.bus && this.$vux.bus.$on('vux:evenBusTest',  this.evenBusTest)
+    },
+    beforeDestroy () {
+      this.$vux && this.$vux.bus && this.$vux.bus.$off('vux:evenBusTest', this.evenBusTest)
+    },
   }
 </script>
 

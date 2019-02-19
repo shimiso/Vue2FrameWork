@@ -10,7 +10,7 @@ import mescrollOptions from '../views/mescroll/mescroll-options'
 import listProducts from '../views/mescroll/list-products'
 import mescrollComponent from '../views/mescroll/mescroll-component'
 import DetailView from '../views/DetailView'
-
+import EvenBusTest from '../views/EvenBusTest'
 
 Vue.use(Router)
 
@@ -20,11 +20,18 @@ export default new Router({
       path: '/',
       name: 'HomeView',
       redirect: '/HomeView'
-    }, {
+    },
+    {
       path: '/HomeView',
       name: 'HomeView',
       component: HomeView
-    }, {
+    },
+    {
+      path: '/EvenBusTest',
+      name: 'EvenBusTest',
+      component: EvenBusTest
+    },
+    {
       path: '/TabbarView',
       name: 'TabbarView',
       component: TabbarView,
@@ -37,31 +44,38 @@ export default new Router({
           name: 'TabitemView',
           component: TabitemView
         }]
-    }, {
+    },
+    {
       path: '/ListView',
       name: 'ListView',
       component: ListView
-    }, {
+    },
+    {
       path: '/XunFeiTest',
       name: 'XunFeiTest',
       component: XunFeiTest
-    }, {
+    },
+    {
       path: '/listNews',
       name: 'listNews',
       component: listNews
-    }, {
+    },
+    {
       path: '/mescrollOptions',
       name: 'mescrollOptions',
       component: mescrollOptions
-    }, {
+    },
+    {
       path: '/listProducts',
       name: 'listProducts',
       component: listProducts
-    }, {
+    },
+    {
       path: '/mescrollComponent',
       name: 'mescrollComponent',
       component: mescrollComponent
-    }, {
+    },
+    {
       path: 'detail/:id',
       name: 'DetailView',
       component: DetailView

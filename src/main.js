@@ -11,7 +11,10 @@ import objectAssign from 'object-assign'
 import store from './store'
 import http from '@/libs/Http.js'
 import { LocalePlugin, AlertPlugin, BusPlugin, ConfigPlugin, ToastPlugin, ConfirmPlugin, LoadingPlugin } from 'vux'
-
+import 'babel-polyfill'
+import Es6Promise from 'es6-promise'
+require('es6-promise').polyfill()
+Es6Promise.polyfill()
 
 // 定义全局变量
 Vue.prototype.$http = http

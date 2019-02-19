@@ -23,7 +23,7 @@ const createLintingRule = () => ({
 const webpackConfig = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: ['babel-polyfill', './src/main.js']
   },
   output: {
     path: config.build.assetsRoot,
@@ -53,8 +53,13 @@ const webpackConfig = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        exclude: /node_modules/, // 处理除了nodde_modules里的js文件
+        loader: 'babel-loader'
+        // include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+      },
+      {
+        test: /vue-preview.src.*?js$/,
+        loader: 'babel-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

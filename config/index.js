@@ -24,6 +24,13 @@ module.exports = {
         pathRewrite: {
           '^/douban': '/' //这里理解成用‘/api’代替target里面的地址，
         }
+      },
+      '/dandian': {
+        target: 'http://jujia01.ycsenior.com:5000/connect/token/',//设置你调用的接口域名和端口号
+        changeOrigin: true, //跨域
+        pathRewrite: {
+          '^/dandian': '/' //这里理解成用‘/api’代替target里面的地址，
+        }
       }
     },
 
