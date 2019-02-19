@@ -51,59 +51,17 @@ const actions = {
    * id: event id
    */
   getSingleEvent({commit, state}, payload) {
-    let postData = qs.stringify({
-      'grant_type':'password',
-      'username':'shimingsong',
-      'password':'Pass123$',
-      'client_id':'ro.client',
-      'client_secret':'secret',
-      'scopes':'StaffInfo'
-    })
-
-    // axios({
-    //   method: 'post',
-    //   url:'/dandian',
-    //   timeout: 5000,
-    //   headers:{
-    //     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    //     'Accept': '*/*',
-    //     'X-CSRF-TOKEN': '8vMyyBrsamNi4my3UQQMHOG7blsEebn5Y5m2E5WG'
-    //   },
-    //   data:postData
-    // }).then((res)=>{
-    //   console.log('返回结果：', res)
-    // });
-
-   /* Vue.prototype.$http.post('/dandian',postData,{
-      'Content-Type': 'application/x-www-form-urlencoded'
-    }).then((res) => {
-      console.log('返回结果：', res)
-      this.json = res
-    }, (error) => {
-      console.log(error)
-    })*/
      return new Promise((resolve, reject) => {
-
        request
-         .post('http://jujia01.ycsenior.com:5000/connect/token')
-         .type('form')
-         .set('Content-Type', 'application/x-www-form-urlencoded')
-         // .send('{"grant_type":"password","username":"shimingsong","password":"Pass123","client_id":"ro.client","client_secret":"secret","scopes":"StaffInfo"}') // name=An&age=20
-         // .send('grant_type=password&username=shimingsong&password=Pass123$&client_id=ro.client&client_secret=secret&scopes=StaffInfo')
-         // .send('grant_type=password')
-         // .send('username=shimingsong')
-         // .send('password=Pass123$')
-         // .send('client_id=ro.client')
-         // .send('client_secret=secret')
-         // .send('scopes=StaffInfo')
-         .set('Accept', '*/*')
-         .send(postData)
-
-
+         .get('https://api.douban.com/v2/event/' + payload.id)
          .use(jsonp({timeout: 10000}))
          .end((err, res) => {
            if (!err) {
-             console.log(res)
+             commit({
+               type: 'getSingleEvent',
+               res: res.body
+             })
+             resolve(res)
            }
          })
      })

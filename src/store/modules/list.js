@@ -19,7 +19,7 @@ const actions = {
       }
     })
       .then((response) => {
-        let len = response.data.events.length = 0
+        let len = response.data.events.length
         if (len === 0) {
           // 重写关于数据为空的dom
           upParams.mescrollUp.empty = {
