@@ -104,19 +104,18 @@ export default {
   .list {
     .mescroll {
       position: fixed;
-      top: 44px;
+      top: 1rem;
       bottom: 0;
       height: auto;
     }
     .thumbnail {
       position: relative;
       display: block;
-      padding: 2.5rem 1.8rem 2.5rem 0;
-      margin-left: 1.8rem;
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 
       .content {
         overflow: hidden;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
       h3 {
@@ -124,7 +123,7 @@ export default {
         margin-bottom: 0.6rem;
         line-height: 1.41;
         text-align: justify;
-        font-size: 1.7rem;
+        font-size: 0.6rem;
         font-weight: 500;
         color: #494949;
       }
@@ -133,26 +132,26 @@ export default {
         line-height: 1.5;
         text-align: justify;
         color: #aaa;
-        font-size: 1.2rem;
+        font-size: 0.5rem;
         overflow: hidden;
       }
 
       img {
         float: right;
         width: 25.6%;
-        height: 8.678rem;
-        margin-left: 2.5rem;
+        height: 4.0rem;
+        margin-left: 1rem;
       }
 
       .author {
-        font-size: 1.2rem;
+        font-size: 0.5rem;
         color: #ccc;
       }
 
       .label {
         position: absolute;
-        bottom: 2.5rem;
-        right: 1.8rem;
+        bottom: 0.5rem;
+        right: 0.5rem;
       }
     }
 
@@ -161,7 +160,7 @@ export default {
       left: 0;
       top: 0;
       width: 100%;
-      height: 0.1rem;
+      height: 0.03rem;
       content: '';
       background: #e3e3e3;
     }
@@ -170,14 +169,14 @@ export default {
       h3 {
         padding: 0;
         line-height: 1.41;
-        font-size: 1.7rem;
+        font-size: 0.5rem;
         font-weight: 500;
         color: #494949;
       }
 
       .info {
         margin-top: 0.5rem;
-        font-size: 1.4rem;
+        font-size: 0.5rem;
         color: #42bd56;
       }
     }

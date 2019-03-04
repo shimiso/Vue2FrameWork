@@ -16,7 +16,9 @@
     <group title="EvenBus测试例子">
       <cell title="EvenBus测试例子" :value="evenBusData" :link="{path:'/EvenBusTest'}" is-link></cell>
     </group>
-
+    <group title="菜单例子">
+      <cell title="下拉筛选菜单例子"  :link="{path:'/dropDownFilterList'}" is-link></cell>
+    </group>
     <group title="mescroll + vue 案例">
       <cell title="list-news 新闻列表" :link="{path:'/listNews'}" is-link><span class="tip">下拉刷新添加数据到列表顶部</span></cell>
       <cell title="list-products 商品列表" :link="{path:'/listProducts'}" is-link><span class="tip">下拉刷新重置列表数据</span></cell>

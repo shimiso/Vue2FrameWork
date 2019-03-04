@@ -1,15 +1,19 @@
 <template>
   <div>
-    <transition
-      @after-enter="$vux.bus && $vux.bus.$emit('vux:after-view-enter')"
-      :name="viewTransition" :css="!!direction">
-      <router-view class="router-view"></router-view>
+    <transition :name="viewTransition" :css="!!direction">
+      //include属性表示只有name属性的组件会被缓存，（注意是组件的名字，不是路由的名字）
+      //其它组件不会被缓存exclude属性表示除了name属性为indexLists的组件不会被缓存，其它组件都会被缓存
+      <keep-alive include="bookLists">
+        <router-view class="router-view"></router-view>
+      </keep-alive>
     </transition>
+    <svg-icon></svg-icon>
   </div>
 </template>
 
 <script>
   import {  TransferDom } from 'vux'
+  import svgIcon from './components/svg';
   import { mapState, mapActions } from 'vuex'
 
   export default {
@@ -17,6 +21,7 @@
       TransferDom
     },
     components: {
+      svgIcon
     },
     methods: {
     },

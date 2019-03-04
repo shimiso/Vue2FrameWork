@@ -5,10 +5,10 @@
      <x-header :left-options="{backText: ''}">DetailViewDemo</x-header>
      <template>
        <div class="info">
-         <h2>
+         <h4>
            {{eventItem.title}}
            <span class="badge">{{eventItem.loc_name}}</span>
-         </h2>
+         </h4>
          <div class="poster">
            <img :src="eventItem.image_hlarge" alt="">
          </div>
@@ -108,33 +108,33 @@ export default {
 
 <style lang="scss" scoped>
 .info {
-  margin: 1rem;
+  margin: 0.5rem;
 
   h2 {
-    margin: 2rem 0;
+    margin: 0.5rem 0;
     font-weight: bold;
     color: #494949;
   }
 
   .badge {
     display: inline-block;
-    padding: 0.1rem 0.5rem;
-    margin-bottom: 0.3rem;
+    padding: 0.1rem 0.2rem;
+    margin-bottom: 0.2rem;
     vertical-align: middle;
-    line-height: 1.8rem;
-    font-size: 1.2rem;
+    line-height: 0.8rem;
+    font-size: 0.5rem;
     color: #fff;
     background-color: #FF8263;
-    border-radius: 0.2rem;
+    border-radius: 0.1rem;
   }
 
   .poster {
-    margin: 2rem auto;
+    margin: 0.5rem auto;
     text-align: center;
 
     img {
       width: 100%;
-      max-width: 22rem;
+      max-width: 10.0rem;
       height: auto;
     }
   }
@@ -142,9 +142,9 @@ export default {
 
 .detail {
   margin-left: 3.3rem;
-  margin-bottom: 1rem;
-  min-height: 1.5em;
-  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  min-height: 0.5rem;
+  font-size: 0.5rem;
   clear: left;
 
   span {
@@ -161,13 +161,13 @@ export default {
 }
 
 .describe {
-  h2 {
+  h3 {
     color: #072;
   }
 
   .content {
     overflow: hidden;
-    font-size: 1.4rem;
+    font-size: 0.5rem;
   }
 }
 
