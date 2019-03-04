@@ -1,5 +1,6 @@
 <template>
   <div>
+    <x-header class="head_top" :left-options="{backText: ''}">下拉筛选菜单</x-header>
     <section class="sort_container">
       <!-- 分类 -->
       <div class="sort_item" :class="{choose_type:sortBy == 'food'}" >
@@ -171,6 +172,7 @@
 </template>
 
 <script>
+  import { XHeader } from 'vux'
   var categoryData = require('./category.json')
   export default {
     data() {
@@ -195,6 +197,7 @@
       this.initData();
     },
     components: {
+      XHeader
     },
     computed: {
     },
@@ -314,11 +317,18 @@
 
 <style lang="scss" scoped>
   @import "src/style/mixin";
+  .head_top{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    @include wh(100%, 1.95rem);
+  }
   .sort_container {
     background-color: #fff;
     border-bottom: 0.025rem solid #f1f1f1;
     position: fixed;
-    /*top: 1.95rem;*/
+    top: 1.95rem;
     right: 0;
     width: 100%;
     display: flex;
