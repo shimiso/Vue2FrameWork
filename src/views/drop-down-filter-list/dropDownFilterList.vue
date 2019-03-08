@@ -317,26 +317,30 @@
 
 <style lang="scss" scoped>
   @import "src/style/mixin";
+  /*section{*/
+    /*height: 1rem;*/
+    /*vertical-align: middle;*/
+  /*}*/
   .head_top{
     position: fixed;
     z-index: 100;
     left: 0;
     top: 0;
-    @include wh(100%, 1.95rem);
+    @include wh(100%, 1.25rem);
   }
   .sort_container {
     background-color: #fff;
     border-bottom: 0.025rem solid #f1f1f1;
     position: fixed;
-    top: 1.95rem;
+    top: 1.25rem;
     right: 0;
     width: 100%;
     display: flex;
     z-index: 13;
     box-sizing: border-box;
     .sort_item {
-      @include sc(0.55rem, #444);
-      @include wh(33.3%, 1.6rem);
+      @include sc(0.4rem, #444);
+      @include wh(33.3%, 1rem);
       text-align: center;
       line-height: 1rem;
       .sort_item_container {
@@ -345,7 +349,6 @@
         z-index: 14;
         background-color: #fff;
         box-sizing: border-box;
-        padding-top: 0.3rem;
         .sort_item_border {
           height: 1rem;
           border-right: 0.025rem solid $bc;
@@ -382,7 +385,6 @@
       width: 100%;
       position: absolute;
       display: flex;
-      top: 1.6rem;
       left: 0;
       border-top: 0.025rem solid $bc;
       background-color: #fff;
@@ -391,23 +393,23 @@
       .category_left {
         flex: 1;
         background-color: #f1f1f1;
-        height: 16rem;
+        height: 10rem;
         overflow-y: auto;
         span {
-          @include sc(0.5rem, #666);
-          line-height: 1.8rem;
+          @include sc(0.4rem, #666);
+          line-height: 0.8rem;
         }
         .category_left_li {
           @include fj;
-          padding: 0 0.5rem;
+          padding: 0 0.1rem;
           .category_icon {
-            @include wh(0.8rem, 0.8rem);
+            @include wh(0.4rem, 0.4rem);
             vertical-align: middle;
-            margin-right: 0.2rem;
+            margin-right: 0.1rem;
           }
           .category_count {
             background-color: #ccc;
-            @include sc(0.4rem, #fff);
+            @include sc(0.1rem, #fff);
             padding: 0 0.1rem;
             border: 0.025rem solid #ccc;
             border-radius: 0.8rem;
@@ -426,12 +428,12 @@
         flex: 1;
         background-color: #fff;
         padding-left: 0.5rem;
-        height: 16rem;
+        height: 10rem;
         overflow-y: auto;
         .category_right_li {
           @include fj;
-          height: 1.8rem;
-          line-height: 1.8rem;
+          height: 0.8rem;
+          line-height: 0.8rem;
           padding-right: 0.5rem;
           border-bottom: 0.025rem solid $bc;
           span {
@@ -448,19 +450,19 @@
     .sort_list_container {
       width: 100%;
       .sort_list_li {
-        height: 2.5rem;
+        height: 1rem;
         display: flex;
         align-items: center;
         svg {
-          @include wh(0.7rem, 0.7rem);
+          @include wh(0.4rem, 0.4rem);
           margin: 0 0.3rem 0 0.8rem;
         }
         p {
-          line-height: 2.5rem;
+          line-height: 1rem;
           flex: auto;
           text-align: left;
           text-indent: 0.25rem;
-          border-bottom: 0.025rem solid $bc;
+          border-bottom: 0.001rem solid $bc;
           @include fj;
           align-items: center;
           span {
@@ -481,8 +483,8 @@
       background-color: #f1f1f1;
       .filter_header_style {
         @include sc(0.4rem, #333);
-        line-height: 1.5rem;
-        height: 1.5rem;
+        line-height: 1rem;
+        height: 1rem;
         text-align: left;
         padding-left: 0.5rem;
         background-color: #fff;
@@ -496,25 +498,25 @@
           display: flex;
           align-items: center;
           border: 0.025rem solid #eee;
-          @include wh(4.7rem, 1.4rem);
-          margin-right: 0.25rem;
+          @include wh(2.6rem, 0.8rem);
+          margin-right: 0.1rem;
           border-radius: 0.125rem;
-          padding: 0 0.25rem;
-          margin-bottom: 0.25rem;
+          padding: 0 0.1rem;
+          margin-bottom: 0.1rem;
           svg {
-            @include wh(0.8rem, 0.8rem);
+            @include wh(0.4rem, 0.4rem);
             margin-right: 0.125rem;
           }
           span {
             @include sc(0.4rem, #333);
           }
           .filter_icon {
-            @include wh(0.8rem, 0.8rem);
-            font-size: 0.5rem;
+            @include wh(0.6rem, 0.6rem);
+            font-size: 0.1rem;
             border: 0.025rem solid $bc;
             border-radius: 0.15rem;
             margin-right: 0.25rem;
-            line-height: 0.8rem;
+            line-height: 0.6rem;
             text-align: center;
           }
           .activity_svg {
@@ -531,9 +533,9 @@
         width: 100%;
         padding: 0.3rem 0.2rem;
         .filter_button_style {
-          @include wh(50%, 1.8rem);
-          font-size: 0.8rem;
-          line-height: 1.8rem;
+          @include wh(40%, 1rem);
+          font-size: 0.4rem;
+          line-height: 1rem;
           border-radius: 0.2rem;
         }
         .clear_all {

@@ -19,12 +19,12 @@
     <group title="菜单例子">
       <cell title="下拉筛选菜单例子"  :link="{path:'/dropDownFilterList'}" is-link></cell>
     </group>
-    <group title="mescroll + vue 案例">
-      <cell title="list-news 新闻列表" :link="{path:'/listNews'}" is-link><span class="tip">下拉刷新添加数据到列表顶部</span></cell>
-      <cell title="list-products 商品列表" :link="{path:'/listProducts'}" is-link><span class="tip">下拉刷新重置列表数据</span></cell>
-      <cell title="mescroll-vue 组件" :link="{path:'/mescrollComponent'}" is-link><span class="tip" style="color:red">强烈推荐以组件的方式使用</span>
+    <group title="mescroll+vue 案例">
+      <cell title="list-news新闻列表" :link="{path:'/listNews'}" is-link><span class="tip">下拉刷新添加数据到列表顶部</span></cell>
+      <cell title="list-products商品列表" :link="{path:'/listProducts'}" is-link><span class="tip">下拉刷新重置列表数据</span></cell>
+      <cell title="mescroll-vue组件" :link="{path:'/mescrollComponent'}" is-link><span class="tip" style="color:red">强烈推荐以组件的方式使用</span>
       </cell>
-      <cell title="mescroll-options 所有配置项" :link="{path:'/mescrollOptions'}" is-link><span
+      <cell title="mescroll-options所有配置" :link="{path:'/mescrollOptions'}" is-link><span
         class="tip">快速熟悉mescroll</span></cell>
     </group>
   </div>

@@ -108,10 +108,10 @@ export default {
 
 <style lang="scss" scoped>
 .info {
-  margin: 0.5rem;
+  margin: 0.4rem;
 
   h2 {
-    margin: 0.5rem 0;
+    margin: 0.2rem 0;
     font-weight: bold;
     color: #494949;
   }
@@ -121,20 +121,20 @@ export default {
     padding: 0.1rem 0.2rem;
     margin-bottom: 0.2rem;
     vertical-align: middle;
-    line-height: 0.8rem;
-    font-size: 0.5rem;
+    line-height: 0.4rem;
+    font-size: 0.4rem;
     color: #fff;
     background-color: #FF8263;
     border-radius: 0.1rem;
   }
 
   .poster {
-    margin: 0.5rem auto;
+    margin: 0.2rem auto;
     text-align: center;
 
     img {
       width: 100%;
-      max-width: 10.0rem;
+      max-width: 5.0rem;
       height: auto;
     }
   }
@@ -142,9 +142,9 @@ export default {
 
 .detail {
   margin-left: 3.3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   min-height: 0.5rem;
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   clear: left;
 
   span {
@@ -167,7 +167,7 @@ export default {
 
   .content {
     overflow: hidden;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
   }
 }
 

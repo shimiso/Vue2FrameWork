@@ -11,7 +11,7 @@ import listProducts from '../views/mescroll/list-products'
 import mescrollComponent from '../views/mescroll/mescroll-component'
 import DetailView from '../views/DetailView'
 import EvenBusTest from '../views/EvenBusTest'
-import DropDownFilterList from '../views/dropDownFilterList/dropDownFilterList'
+import DropDownFilterList from '../views/drop-down-filter-list/dropDownFilterList'
 
 Vue.use(Router)
 

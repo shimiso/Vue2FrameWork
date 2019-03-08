@@ -111,19 +111,19 @@ export default {
     .thumbnail {
       position: relative;
       display: block;
-      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      padding: 0.2rem 0.2rem 0.2rem 0.2rem;
 
       .content {
         overflow: hidden;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
       }
 
       h3 {
         margin-top: 0;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.2rem;
         line-height: 1.41;
         text-align: justify;
-        font-size: 0.6rem;
+        font-size: 0.4rem;
         font-weight: 500;
         color: #494949;
       }
@@ -132,25 +132,24 @@ export default {
         line-height: 1.5;
         text-align: justify;
         color: #aaa;
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         overflow: hidden;
       }
 
       img {
         float: right;
         width: 25.6%;
-        height: 4.0rem;
-        margin-left: 1rem;
+        height: 3.5rem;
+        margin-left: 0.4rem;
       }
 
       .author {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         color: #ccc;
       }
 
       .label {
         position: absolute;
-        bottom: 0.5rem;
         right: 0.5rem;
       }
     }

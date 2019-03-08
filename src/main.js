@@ -9,11 +9,14 @@ import vuxLocales from 'vux/src/locales/all.yml'
 import componentsLocales from 'vux/src/locales/components.yml'
 import objectAssign from 'object-assign'
 import store from './store'
-import http from '@/libs/axiosUtils.js'
-import './libs/rem'
+import http from './libs/axiosUtils.js'
+import 'lib-flexible/flexible'
 import { LocalePlugin, AlertPlugin, BusPlugin, ConfigPlugin, ToastPlugin, ConfirmPlugin, LoadingPlugin } from 'vux'
 import 'babel-polyfill'
 import Es6Promise from 'es6-promise'
+
+// 需要注意的是axios是基于Promise的，因此如果你需要兼容低版本浏览器(caniuse)，需要引入polyfill。
+// Polyfill 推荐使用 es6-promise
 require('es6-promise').polyfill()
 Es6Promise.polyfill()
 
@@ -24,6 +27,8 @@ Vue.use(ToastPlugin)
 Vue.use(ConfirmPlugin)
 Vue.use(AlertPlugin)
 Vue.use(LoadingPlugin)
+Vue.use(AlertPlugin)
+Vue.use(BusPlugin)
 
 // 公用的弹窗(全局变量)
 Vue.prototype.showToast = function (text, width) {
@@ -44,10 +49,6 @@ Vue.prototype.showLoading = function (text) {
 Vue.prototype.hideLoading = function () {
   Vue.$vux.loading.hide()
 }
-
-// 需要注意的是axios是基于Promise的，因此如果你需要兼容低版本浏览器(caniuse)，需要引入polyfill。
-// Polyfill 推荐使用 es6-promise
-require('es6-promise').polyfill()
 
 Vue.use(vuexI18n.plugin, store)
 Vue.use(LocalePlugin)
@@ -88,10 +89,6 @@ store.registerModule('vux', {
 Vue.use(ConfigPlugin, {
   $layout: 'VIEW_BOX' // global config for VUX, since v2.5.12
 })
-
-// plugins
-Vue.use(AlertPlugin)
-Vue.use(BusPlugin)
 
 // simple history management
 const history = window.sessionStorage
