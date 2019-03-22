@@ -1,18 +1,19 @@
 <template>
   <div>
     <group title="Axios的例子">
-      <cell title="ListViewDemo" :link="{path:'/ListView'}" is-link></cell>
+      <cell title="ListViewDemo" :link="{path:'/listView'}" is-link></cell>
       <cell title="DetailViewDemo" :link="{name: 'DetailView', params: { id: 31415985 }}" is-link></cell>
     </group>
 
     <group title="Vux的例子">
-      <cell title="TabbarView" :link="{path:'/TabbarView'}" is-link></cell>
+      <cell title="TabbarView" :link="{path:'/tabbarView'}" is-link></cell>
     </group>
 
-    <group title="科大讯飞的例子">
-      <cell title="科大讯飞" :link="{path:'/XunFeiTest'}" is-link></cell>
-      <cell title="打开原生文件" :link="{path:'/NativeFile'}" is-link></cell>
-      <cell title="EvenBus测试例子" :value="evenBusData" :link="{path:'/EvenBusTest'}" is-link></cell>
+    <group title="其他例子">
+      <cell title="科大讯飞" :link="{path:'/xunFeiTest'}" is-link></cell>
+      <cell title="打开DataUrl文件" :link="{path:'/nativeFileView'}" is-link></cell>
+      <cell title="上传图片" :link="{path:'/uploadImagesView'}" is-link></cell>
+      <cell title="EvenBus测试例子" :value="evenBusData" :link="{path:'/evenBusTest'}" is-link></cell>
     </group>
     <group title="菜单例子">
       <cell title="下拉筛选菜单例子"  :link="{path:'/dropDownFilterList'}" is-link></cell>

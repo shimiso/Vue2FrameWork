@@ -7,75 +7,67 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HomeView',
-      redirect: '/HomeView'
+      redirect: '/homeView'
     },
     {
-      path: '/HomeView',
-      name: 'HomeView',
+      path: '/homeView',
       component: resolve => require(['../views/HomeView.vue'], resolve)
     },
     {
-      path: '/NativeFile',
-      component: resolve => require(['../views/NativeFile.vue'], resolve)
+      path: '/nativeFileView',
+      component: resolve => require(['../views/NativeFileView.vue'], resolve)
     },
     {
-      path: '/EvenBusTest',
-      name: 'EvenBusTest',
+      path: '/uploadImagesView',
+      component: resolve => require(['../views/UploadImagesView.vue'], resolve)
+    },
+    {
+      path: '/evenBusTest',
       component: resolve => require(['../views/EvenBusTest.vue'], resolve)
     },
     {
-      path: '/TabbarView',
-      name: 'TabbarView',
+      path: '/tabbarView',
       component: resolve => require(['../views/TabbarView.vue'], resolve),
       children: [
         {
           path: '',
-          redirect: '/TabbarView/TabitemView'
+          redirect: '/tabbarView/tabitemView'
         }, {
-          path: 'TabitemView',
-          name: 'TabitemView',
+          path: 'tabitemView',
           component: resolve => require(['../views/TabitemView.vue'], resolve)
         }]
     },
     {
-      path: '/ListView',
-      name: 'ListView',
+      path: '/listView',
       component: resolve => require(['../views/ListView.vue'], resolve)
     },
     {
-      path: '/XunFeiTest',
-      name: 'XunFeiTest',
+      path: '/xunFeiTest',
       component: resolve => require(['../views/XunFeiTest.vue'], resolve)
     },
     {
       path: '/listNews',
-      name: 'listNews',
       component: resolve => require(['../views/ListView.vue'], resolve)
     },
     {
       path: '/dropDownFilterList',
-      name: 'DropDownFilterList',
       component: resolve => require(['../views/drop-down-filter-list/DropDownFilterList.vue'], resolve)
     },
     {
       path: '/mescrollOptions',
-      name: 'mescrollOptions',
       component: resolve => require(['../views/mescroll/mescroll-options.vue'], resolve)
     },
     {
       path: '/listProducts',
-      name: 'listProducts',
       component: resolve => require(['../views/mescroll/list-products.vue'], resolve)
     },
     {
       path: '/mescrollComponent',
-      name: 'mescrollComponent',
       component: resolve => require(['../views/mescroll/mescroll-component.vue'], resolve)
     },
     {
       path: 'detail/:id',
-      name: 'DetailView',
+      name:'DetailView',
       component: resolve => require(['../views/DetailView.vue'], resolve)
     }
   ]
