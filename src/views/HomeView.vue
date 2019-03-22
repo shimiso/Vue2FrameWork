@@ -1,5 +1,6 @@
 <template>
   <div>
+    <x-header :left-options="{showBack: false}">VUE框架</x-header>
     <group title="Axios的例子">
       <cell title="ListViewDemo" :link="{path:'/listView'}" is-link></cell>
       <cell title="DetailViewDemo" :link="{name: 'DetailView', params: { id: 31415985 }}" is-link></cell>
@@ -30,7 +31,7 @@
 </template>
 
 <script>
-  import {Group, Cell, TransferDomDirective as TransferDom} from 'vux'
+  import {Group, Cell,XHeader, TransferDomDirective as TransferDom} from 'vux'
 
   export default {
     directives: {
@@ -38,7 +39,8 @@
     },
     components: {
       Group,
-      Cell
+      Cell,
+      XHeader
     },
     data() {
       return {
