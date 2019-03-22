@@ -11,9 +11,7 @@
 
     <group title="科大讯飞的例子">
       <cell title="科大讯飞" :link="{path:'/XunFeiTest'}" is-link></cell>
-    </group>
-
-    <group title="EvenBus测试例子">
+      <cell title="打开原生文件" :link="{path:'/NativeFile'}" is-link></cell>
       <cell title="EvenBus测试例子" :value="evenBusData" :link="{path:'/EvenBusTest'}" is-link></cell>
     </group>
     <group title="菜单例子">

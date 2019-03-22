@@ -1,17 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TabbarView from '../views/TabbarView'
-import ListView from '../views/ListView'
-import HomeView from '../views/HomeView'
-import TabitemView from '../views/TabitemView'
-import XunFeiTest from '../views/XunFeiTest'
-import listNews from '../views/mescroll/list-news'
-import mescrollOptions from '../views/mescroll/mescroll-options'
-import listProducts from '../views/mescroll/list-products'
-import mescrollComponent from '../views/mescroll/mescroll-component'
-import DetailView from '../views/DetailView'
-import EvenBusTest from '../views/EvenBusTest'
-import DropDownFilterList from '../views/drop-down-filter-list/dropDownFilterList'
 
 Vue.use(Router)
 
@@ -25,17 +13,21 @@ export default new Router({
     {
       path: '/HomeView',
       name: 'HomeView',
-      component: HomeView
+      component: resolve => require(['../views/HomeView.vue'], resolve)
+    },
+    {
+      path: '/NativeFile',
+      component: resolve => require(['../views/NativeFile.vue'], resolve)
     },
     {
       path: '/EvenBusTest',
       name: 'EvenBusTest',
-      component: EvenBusTest
+      component: resolve => require(['../views/EvenBusTest.vue'], resolve)
     },
     {
       path: '/TabbarView',
       name: 'TabbarView',
-      component: TabbarView,
+      component: resolve => require(['../views/TabbarView.vue'], resolve),
       children: [
         {
           path: '',
@@ -43,48 +35,48 @@ export default new Router({
         }, {
           path: 'TabitemView',
           name: 'TabitemView',
-          component: TabitemView
+          component: resolve => require(['../views/TabitemView.vue'], resolve)
         }]
     },
     {
       path: '/ListView',
       name: 'ListView',
-      component: ListView
+      component: resolve => require(['../views/ListView.vue'], resolve)
     },
     {
       path: '/XunFeiTest',
       name: 'XunFeiTest',
-      component: XunFeiTest
+      component: resolve => require(['../views/XunFeiTest.vue'], resolve)
     },
     {
       path: '/listNews',
       name: 'listNews',
-      component: listNews
+      component: resolve => require(['../views/ListView.vue'], resolve)
     },
     {
       path: '/dropDownFilterList',
       name: 'DropDownFilterList',
-      component: DropDownFilterList
+      component: resolve => require(['../views/drop-down-filter-list/DropDownFilterList.vue'], resolve)
     },
     {
       path: '/mescrollOptions',
       name: 'mescrollOptions',
-      component: mescrollOptions
+      component: resolve => require(['../views/mescroll/mescroll-options.vue'], resolve)
     },
     {
       path: '/listProducts',
       name: 'listProducts',
-      component: listProducts
+      component: resolve => require(['../views/mescroll/list-products.vue'], resolve)
     },
     {
       path: '/mescrollComponent',
       name: 'mescrollComponent',
-      component: mescrollComponent
+      component: resolve => require(['../views/mescroll/mescroll-component.vue'], resolve)
     },
     {
       path: 'detail/:id',
       name: 'DetailView',
-      component: DetailView
+      component: resolve => require(['../views/DetailView.vue'], resolve)
     }
   ]
 })
