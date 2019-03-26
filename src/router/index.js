@@ -47,7 +47,7 @@ export default new Router({
     },
     {
       path: '/listNews',
-      component: resolve => require(['../views/ListView.vue'], resolve)
+      component: resolve => require(['../views/mescroll/list-news.vue'], resolve)
     },
     {
       path: '/dropDownFilterList',

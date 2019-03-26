@@ -1,9 +1,7 @@
 <template>
  <div class="wrap">
-   <loading :pageType="type" ></loading>
    <div class="detail-view has-header">
      <x-header :left-options="{backText: ''}">DetailViewDemo</x-header>
-     <template>
        <div class="info">
          <h4>
            {{eventItem.title}}
@@ -49,14 +47,14 @@
            <div v-if="eventItem.content" class="content" v-html="content"></div>
          </div>
        </div>
-     </template>
+     <loading :pageType="type" @clickEvent="loadData"></loading>
    </div>
  </div>
 
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState,mapActions } from 'vuex'
 import Tags from '../components/Tags'
 import Loading from '../components/Loading'
 import { XHeader } from 'vux'
@@ -66,11 +64,11 @@ export default {
   components: { Tags, Loading,XHeader },
   data () {
     return {
-      isShow:false,
       type:{
-        isShow:false, //是否显示
-        pageType:"customer", //显示类型
-        text:"用户自定义！"  // 用户自定义显示文字
+        isShow:true, //是否显示
+        pageType:"loading", //显示类型
+        img:require('../assets/icon_nav_msg.png'),
+        text:"正在加载中..."  // 用户自定义显示文字
       },
     }
   },
@@ -81,8 +79,7 @@ export default {
   },
   computed: {
     content: function () {
-      // Careful XSS
-      // Remove copyright imgs
+      // Careful XSS  Remove copyright imgs
       return this.eventItem.content.replace(/<img.+?>/ig, '')
     },
     // Getting Vuex State from store/modules/activities
@@ -91,17 +88,25 @@ export default {
     })
   },
   created () {
-    // Getting route params
-    const id = this.$route.params.id
-
-    // Dispatching getSingleEvent
-    this.$store.dispatch({
-      type: 'getSingleEvent',
-      id: id
-    }).then(res => {
-      // Success handle
-      this.showLoading = false
-    })
+    this.loadData();
+  },
+  methods:{
+    loadData(){
+      // Getting route params
+      const id = this.$route.params.id
+      this.getSingleEvent({
+        id:12
+      }).then(res => {
+        // Success handle
+        this.type.isShow = false
+      }).catch(err=>{
+        this.type.pageType = 'error'
+        console.error('get请求异常：' + err)
+      })
+    },
+    ...mapActions([
+      'getSingleEvent'
+    ])
   }
 }
 </script>

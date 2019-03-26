@@ -3,6 +3,7 @@ import jsonp from 'superagent-jsonp'
 import Vue from 'vue'
 import qs from 'qs';
 import axios from 'axios'
+
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 const state = {
   events: [],
@@ -16,7 +17,7 @@ const mutations = {
     state.skip += 3
     state.events = state.events.concat(payload.res)
   },
-  getSingleEvent (state, payload) {
+  getSingleEvent(state, payload) {
     state.eventItem = payload.res
   }
 }
@@ -51,20 +52,24 @@ const actions = {
    * id: event id
    */
   getSingleEvent({commit, state}, payload) {
-     return new Promise((resolve, reject) => {
-       request
-         .get('https://api.douban.com/v2/event/' + payload.id)
-         .use(jsonp({timeout: 10000}))
-         .end((err, res) => {
-           if (!err) {
-             commit({
-               type: 'getSingleEvent',
-               res: res.body
-             })
-             resolve(res)
-           }
-         })
-     })
+    return new Promise((resolve, reject) => {
+      setTimeout(function () {
+        request
+          .get('https://api.douban.com/v2/event/' + payload.id)
+          .use(jsonp({timeout: 10000}))
+          .end((err, res) => {
+            if (!err) {
+              commit({
+                type: 'getSingleEvent',
+                res: res.body
+              })
+              resolve(res)
+            } else {
+              reject(err)
+            }
+          })
+      }, 2000);
+    })
     /*  request
         .get('https://api.douban.com/v2/event/' + payload.id)
         .use(jsonp({timeout: 10000}))
@@ -79,17 +84,17 @@ const actions = {
         })
     })*/
 
-   /* Vue.prototype.$http.get('/douban/event/'+payload.id)
-      .then((response) => {
-        Vue.prototype.showToast('请求成功')
-        commit({
-          type: 'getSingleEvent',
-          res: response.data
-        })
-        console.log('成功返回：', response.data)
-      }, (error) => {
-        Vue.prototype.showToast('请求失败：' + error);
-      })*/
+    /* Vue.prototype.$http.get('/douban/event/'+payload.id)
+       .then((response) => {
+         Vue.prototype.showToast('请求成功')
+         commit({
+           type: 'getSingleEvent',
+           res: response.data
+         })
+         console.log('成功返回：', response.data)
+       }, (error) => {
+         Vue.prototype.showToast('请求失败：' + error);
+       })*/
   }
 }
 

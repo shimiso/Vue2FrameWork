@@ -33,7 +33,7 @@ const actions = {
             }
           }
         }
-        Vue.prototype.showToast('请求成功')
+        // Vue.prototype.showToast('请求成功')
         commit({
           type: 'getUpCallbackList',
           res: response.data.events
