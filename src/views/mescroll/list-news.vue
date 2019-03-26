@@ -120,6 +120,7 @@ export default {
       // 延时一秒,模拟联网
       setTimeout(function () {
         try {
+          // throw new Error("故意的");
           if (pageNum === 0) {
             // 此处模拟下拉刷新返回的数据
             var id = new Date().getTime()

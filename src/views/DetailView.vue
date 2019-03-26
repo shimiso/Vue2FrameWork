@@ -95,7 +95,7 @@ export default {
       // Getting route params
       const id = this.$route.params.id
       this.getSingleEvent({
-        id:12
+        id:id
       }).then(res => {
         // Success handle
         this.type.isShow = false
