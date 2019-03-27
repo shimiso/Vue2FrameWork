@@ -67,8 +67,7 @@ export default {
       type:{
         isShow:true, //是否显示
         pageType:"loading", //显示类型
-        img:require('../assets/icon_nav_msg.png'),
-        text:"正在加载中..."  // 用户自定义显示文字
+        img:require('../assets/icon_nav_msg.png')
       },
     }
   },

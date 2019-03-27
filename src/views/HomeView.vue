@@ -27,8 +27,8 @@
       <cell title="mescroll-options所有配置" :link="{path:'/mescrollOptions'}" is-link><span
         class="tip">快速熟悉mescroll</span></cell>
     </group>
-    <group title="elementTree">
-      <cell title="elementUITree例子" :link="{path:'/elementTreeDemo'}" is-link></cell>
+    <group title="element例子">
+      <cell title="Tree例子" :link="{path:'/elementTreeDemo'}" is-link></cell>
     </group>
   </div>
 </template>

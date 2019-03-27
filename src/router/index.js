@@ -72,7 +72,7 @@ export default new Router({
     },
     {
       path: '/elementTreeDemo',
-      component: resolve => require(['../views/elementTreeDemo.vue'], resolve)
+      component: resolve => require(['../views/ElementTreeView.vue'], resolve)
     }
   ]
 })

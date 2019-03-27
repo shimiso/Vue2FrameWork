@@ -12,9 +12,9 @@
       </div>
       <div class="loading" v-if="pageType.pageType == 'loading'">
         <Spinner type="android" size="40px"></Spinner>
-        <p class="text_content">{{pageType.text}}</p>
+        <p class="text_content">{{pageType.text==null?'正在加载...':pageType.text}}</p>
       </div>
-      <div class="empty" v-if="pageType.pageType == 'customer'"  @click="handleClick">
+      <div class="loading" v-if="pageType.pageType == 'customer'"  @click="handleClick">
         <img :src="pageType.img" alt="loading">
         <p class="text_content">{{pageType.text}}</p>
       </div>

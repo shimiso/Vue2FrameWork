@@ -33,7 +33,7 @@ module.exports = {
         }
       },
       '/orgStruct': {
-        target: 'http://jujia01.ycsenior.com:5005/api/Org/OrgStruct',//设置你调用的接口域名和端口号
+        target: 'http://jujia01.ycsenior.com:5005/api/Org/OrgStructureQuery',//设置你调用的接口域名和端口号
         changeOrigin: true, //跨域
         pathRewrite: {
           '^/orgStruct': '/' //这里理解成用‘/api’代替target里面的地址，
