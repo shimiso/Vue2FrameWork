@@ -69,6 +69,10 @@ export default new Router({
       path: 'detail/:id',
       name:'DetailView',
       component: resolve => require(['../views/DetailView.vue'], resolve)
+    },
+    {
+      path: '/elementTreeDemo',
+      component: resolve => require(['../views/elementTreeDemo.vue'], resolve)
     }
   ]
 })

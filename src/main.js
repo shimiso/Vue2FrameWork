@@ -14,6 +14,8 @@ import 'lib-flexible/flexible'
 import { LocalePlugin, AlertPlugin, BusPlugin, ConfigPlugin, ToastPlugin, ConfirmPlugin, LoadingPlugin } from 'vux'
 import 'babel-polyfill'
 import Es6Promise from 'es6-promise'
+import { Tree } from 'element-ui';
+
 
 // 需要注意的是axios是基于Promise的，因此如果你需要兼容低版本浏览器(caniuse)，需要引入polyfill。
 // Polyfill 推荐使用 es6-promise
@@ -29,7 +31,7 @@ Vue.use(AlertPlugin)
 Vue.use(LoadingPlugin)
 Vue.use(AlertPlugin)
 Vue.use(BusPlugin)
-
+Vue.use(Tree);
 // 公用的弹窗(全局变量)
 Vue.prototype.showToast = function (text, width) {
   Vue.$vux.toast.show({
