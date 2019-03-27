@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  style="height:100%;">
     <transition :name="viewTransition" :css="!!direction">
       //include属性表示只有name属性的组件会被缓存，（注意是组件的名字，不是路由的名字）
       //其它组件不会被缓存exclude属性表示除了name属性为indexLists的组件不会被缓存，其它组件都会被缓存
