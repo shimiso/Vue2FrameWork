@@ -12,8 +12,12 @@
         <group title="请选择部门" style="margin-top:20px;height: max-content">
           <el-tree :data="data" :props="defaultProps" show-checkbox @check-change="handleCheckChange" @node-click="handleNodeClick"></el-tree>
           <flexbox justify="center" style="margin-top: 20px">
-            <flexbox-item style="text-align: center"><x-button mini @click.native="drawerVisibility = !drawerVisibility">取消</x-button></flexbox-item>
-            <flexbox-item style="text-align: center"><x-button mini type="primary" @click.native="drawerVisibility = !drawerVisibility">确定</x-button></flexbox-item>
+            <flexbox-item style="text-align: center">
+              <x-button mini @click.native="drawerVisibility = !drawerVisibility">取消</x-button>
+            </flexbox-item>
+            <flexbox-item style="text-align: center">
+              <x-button mini type="primary" @click.native="drawerVisibility = !drawerVisibility">确定</x-button>
+            </flexbox-item>
           </flexbox>
         </group>
 
