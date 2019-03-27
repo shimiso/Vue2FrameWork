@@ -15,8 +15,9 @@
       </div>
 
       <!-- main content -->
-      <view-box >
+      <view-box>
         <x-header
+          title="Element-Tree"
           slot="header">
             <span slot="right" @click="drawerVisibility = !drawerVisibility">
               <x-icon type="navicon" size="35" style="fill:#fff;position:relative;top:-8px;left:-3px;"></x-icon>
