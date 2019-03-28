@@ -1,4 +1,5 @@
 import  api  from '@/libs/axiosUtils'
+import {orgStructList} from '@/mock/orgStructList'
 const state = {
   orgStruct:[]
 }
@@ -10,14 +11,16 @@ const mutations = {
 const actions = {
   getOrgStruct({commit}){
     //获取组织结构，调取接口
-    api.post('/orgStruct',{}).then((resolve) => {
+    commit('getOrgStruct',orgStructList)
+    /*api.post('/orgStruct',{}).then((resolve) => {
       if(resolve.data.success){
+        console.log(resolve.data.result.structList)
         commit('getOrgStruct',resolve.data.result.structList)
       }
 
     }).catch((reject) => {
       state.orgStruct = []
-    })
+    })*/
   }
 }
 const getters = {
