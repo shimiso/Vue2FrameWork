@@ -29,12 +29,15 @@
         <li>dsfdsfasdf</li>
         <li>dsfdsfasdf</li>
         <li>dsfdsfasdf</li>
-        <li>dsfdsfasdf</li><li>dsfdsfasdf</li>
-        <li>dsfdsfasdf</li><li>dsfdsfasdf</li>
         <li>dsfdsfasdf</li>
         <li>dsfdsfasdf</li>
         <li>dsfdsfasdf</li>
-        <li>dsfdsfasdf</li><li>dsfdsfasdf</li>
+        <li>dsfdsfasdf</li>
+        <li>dsfdsfasdf</li>
+        <li>dsfdsfasdf</li>
+        <li>dsfdsfasdf</li>
+        <li>dsfdsfasdf</li>
+        <li>dsfdsfasdf</li>
         <li>dsfdsfasdf</li>
     </div>
     <!--响应区域 end-->
@@ -69,61 +72,6 @@
 </script>
 
 <style scope>
-  /*以fixed的方式固定mescroll的高度*/
-  .mescroll {
-    position: fixed;
-    top: 500px;
-    bottom: 0;
-    height: auto;
-  }
-
-  .header {
-    z-index: 9990;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-    background-color: white;
-  }
-
-  .header .btn-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 12px;
-    line-height: 22px;
-  }
-
-  .header .btn-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 12px;
-  }
-
-  .mescroll .notice {
-    font-size: 14px;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    text-align: center;
-    color: #555;
-  }
-
-  .news-list li {
-    padding: 16px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .news-list .new-content {
-    font-size: 14px;
-    margin-top: 6px;
-    margin-left: 10px;
-    color: #666;
-  }
   .mpvue-calendar .lunarStyle span{
       line-height: 1.6;
   }
