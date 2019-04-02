@@ -71,7 +71,7 @@ export default new Router({
     },
     {
       path: 'detail/:id',
-      name:'DetailView',
+      name: 'DetailView',
       component: resolve => require(['../views/DetailView.vue'], resolve)
     },
     {
@@ -85,6 +85,14 @@ export default new Router({
     {
       path: '/H5IOSFixedBugFix',
       component: resolve => require(['../views/H5IOSFixedBug/FixedLayoutFix.vue'], resolve)
+    },
+    {
+      path: '/vuxCalendar',
+      component: resolve => require(['../views/VuxCalendar.vue'], resolve)
+    },
+    {
+      path: '/mpvueCalendar',
+      component: resolve => require(['../views/MpvueCalendar.vue'], resolve)
     }
   ]
 })

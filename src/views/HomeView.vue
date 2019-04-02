@@ -35,6 +35,10 @@
       <cell title="FixedBug" :link="{path:'/H5IOSFixedBug'}" is-link></cell>
       <cell title="FixedFix" :link="{path:'/H5IOSFixedBugFix'}" is-link></cell>
     </group>
+    <group title="日历例子">
+      <cell title="vux-calendar例子" :link="{path:'/vuxCalendar'}" is-link></cell>
+      <cell title="mpvue-calendar例子" :link="{path:'/mpvueCalendar'}" is-link></cell>
+    </group>
   </div>
 </template>
 
