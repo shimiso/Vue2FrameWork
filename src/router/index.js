@@ -80,11 +80,11 @@ export default new Router({
     },
     {
         path: '/vuxCalendar',
-        component: resolve => require(['../views/vuxCalendar.vue'], resolve)
+        component: resolve => require(['../views/VuxCalendar.vue'], resolve)
     },
     {
         path: '/mpvueCalendar',
-        component: resolve => require(['../views/mpvueCalendar.vue'], resolve)
+        component: resolve => require(['../views/MpvueCalendar.vue'], resolve)
     }
   ]
 })
