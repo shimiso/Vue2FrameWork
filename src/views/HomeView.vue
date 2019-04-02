@@ -31,6 +31,10 @@
     <group title="element例子">
       <cell title="Tree例子" :link="{path:'/elementTreeDemo'}" is-link></cell>
     </group>
+    <group title="H5IOSbug">
+      <cell title="FixedBug" :link="{path:'/H5IOSFixedBug'}" is-link></cell>
+      <cell title="FixedFix" :link="{path:'/H5IOSFixedBugFix'}" is-link></cell>
+    </group>
   </div>
 </template>
 

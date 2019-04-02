@@ -77,6 +77,14 @@ export default new Router({
     {
       path: '/elementTreeDemo',
       component: resolve => require(['../views/ElementTreeView.vue'], resolve)
+    },
+    {
+      path: '/H5IOSFixedBug',
+      component: resolve => require(['../views/H5IOSFixedBug/FixedLayout.vue'], resolve)
+    },
+    {
+      path: '/H5IOSFixedBugFix',
+      component: resolve => require(['../views/H5IOSFixedBug/FixedLayoutFix.vue'], resolve)
     }
   ]
 })
