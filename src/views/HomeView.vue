@@ -31,6 +31,10 @@
     <group title="element例子">
       <cell title="Tree例子" :link="{path:'/elementTreeDemo'}" is-link></cell>
     </group>
+    <group title="日历例子">
+      <cell title="vux-calendar例子" :link="{path:'/vuxCalendar'}" is-link></cell>
+      <cell title="mpvue-calendar例子" :link="{path:'/mpvueCalendar'}" is-link></cell>
+    </group>
   </div>
 </template>
 

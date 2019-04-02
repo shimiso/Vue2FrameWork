@@ -77,6 +77,14 @@ export default new Router({
     {
       path: '/elementTreeDemo',
       component: resolve => require(['../views/ElementTreeView.vue'], resolve)
+    },
+    {
+        path: '/vuxCalendar',
+        component: resolve => require(['../views/vuxCalendar.vue'], resolve)
+    },
+    {
+        path: '/mpvueCalendar',
+        component: resolve => require(['../views/mpvueCalendar.vue'], resolve)
     }
   ]
 })
