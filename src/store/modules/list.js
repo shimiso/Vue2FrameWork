@@ -14,7 +14,7 @@ const actions = {
       setTimeout(function () {
         Vue.prototype.$http.get('/douban/event/list', {
           params: {
-            'loc': '108288',
+            'loc': '1082881',
             'start': page.num,
             'count': page.size
           }

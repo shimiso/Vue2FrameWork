@@ -15,8 +15,12 @@ import { LocalePlugin, AlertPlugin, BusPlugin, ConfigPlugin, ToastPlugin, Confir
 import 'babel-polyfill'
 import Es6Promise from 'es6-promise'
 import { Tree } from 'element-ui';
-
-
+import preview from 'vue-photo-preview'
+import 'vue-photo-preview/dist/skin.css'
+var options={
+  fullscreenEl:false //关闭全屏按钮
+}
+Vue.use(preview,options)
 // 需要注意的是axios是基于Promise的，因此如果你需要兼容低版本浏览器(caniuse)，需要引入polyfill。
 // Polyfill 推荐使用 es6-promise
 require('es6-promise').polyfill()

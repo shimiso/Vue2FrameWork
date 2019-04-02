@@ -18,6 +18,10 @@ export default new Router({
       component: resolve => require(['../views/NativeFileView.vue'], resolve)
     },
     {
+      path: '/photoPreview',
+      component: resolve => require(['../views/PhotoPreview.vue'], resolve)
+    },
+    {
       path: '/uploadImagesView',
       component: resolve => require(['../views/UploadImagesView.vue'], resolve)
     },
