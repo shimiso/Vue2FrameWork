@@ -13,6 +13,9 @@
         if (document.activeElement.className.indexOf('inputcontent') >= 0) {
             document.activeElement.scrollIntoViewIfNeeded();     }
     }, 300); -->
+      <cell title="cell" value=".图片半截问题" is-link></cell>
+      <!-- 图片半截问题出现问题  在app里面 img width height  不会继承父元素的高度 只是自己  所以会出现图片按照原来的大小放出来然后是半截状态
+        解决办法是 先把图片放上去 遮罩住 获取他的宽高 按照比例缩小保证不失真  或者用背景图 -->
     </group>
     <div class="border">border</div>
   </div>
