@@ -32,7 +32,7 @@ moment().format('llll'); // 2019年4月8日星期一中午11点55分
 -->
 <template>
   <div id="app">
-    <x-header :left-options="{backText: ''}">Moment时间格式化</x-header>
+    <x-header :left-options="{backText: ''}">Moment日期处理工具</x-header>
     <div id="test">
       <h3>显示格式化的日期时间</h3>
       <p>当前时间：{{date}}</p>
