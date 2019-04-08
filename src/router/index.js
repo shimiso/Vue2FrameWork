@@ -14,6 +14,10 @@ export default new Router({
       component: resolve => require(['../views/HomeView.vue'], resolve)
     },
     {
+      path: '/momentView',
+      component: resolve => require(['../views/MomentView.vue'], resolve)
+    },
+    {
       path: '/nativeFileView',
       component: resolve => require(['../views/NativeFileView.vue'], resolve)
     },

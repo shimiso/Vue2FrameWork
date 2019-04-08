@@ -15,6 +15,7 @@
       <cell title="打开DataUrl文件" :link="{path:'/nativeFileView'}" is-link></cell>
       <cell title="上传图片" :link="{path:'/uploadImagesView'}" is-link></cell>
       <cell title="图片预览" :link="{path:'/photoPreview'}" is-link></cell>
+      <cell title="时间格式化" :link="{path:'/momentView'}" is-link></cell>
       <cell title="EvenBus测试例子" :value="evenBusData" :link="{path:'/evenBusTest'}" is-link></cell>
     </group>
     <group title="菜单例子">
