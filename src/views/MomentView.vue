@@ -91,7 +91,8 @@ Date: Wed, 25 Jul 2018 19:19:42 GMT-0400 (AST)
         return new Date();
       },
       UTCDate:function(){
-        return moment.utc([2010, 1, 14, 15, 25, 50, 125]);
+        //moment.utc([2010, 1, 14, 15, 25, 50, 125]);
+        return moment.utc('2019-04-05 11:22:31');
       },
       // 计算属性的 getter
       dateString: function () {
