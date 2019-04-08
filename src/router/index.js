@@ -84,15 +84,15 @@ export default new Router({
     },
     {
       path: '/H5IOSFixedBug',
-      component: resolve => require(['../views/H5Bug/FixedLayout.vue'], resolve)
+      component: resolve => require(['../views/h5bug/FixedLayout.vue'], resolve)
     },
     {
       path: '/H5IOSFixedBugFix',
-      component: resolve => require(['../views/H5Bug/FixedLayoutFix.vue'], resolve)
+      component: resolve => require(['../views/h5bug/FixedLayoutFix.vue'], resolve)
     },
     {
-      path: '/H5Bug',
-      component: resolve => require(['../views/H5Bug/Bug.vue'], resolve)
+      path: '/h5bug',
+      component: resolve => require(['../views/h5bug/Bug.vue'], resolve)
     },
     {
       path: '/vuxCalendar',

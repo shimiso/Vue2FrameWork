@@ -1,5 +1,6 @@
 <template>
   <div>
+    <x-header :left-options="{backText: ''}">图片预览</x-header>
     <!--单个-->
     <p>单个</p>
     <div class="item">
@@ -20,8 +21,12 @@
 </template>
 
 <script>
+  import {XHeader} from 'vux'
     export default {
-        name: "PhotoPreview"
+      name: "PhotoPreview",
+      components: {
+        XHeader
+      }
     }
 </script>
 

@@ -11,7 +11,7 @@
   import {XButton, Box, XHeader} from 'vux'
 
   export default {
-    name: "EvenBus测试",
+    name: "EvenBus",
     components: {
       XButton,
       Box,
