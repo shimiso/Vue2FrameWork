@@ -1,4 +1,4 @@
-<!--
+<!-- 详细使用文档 http://momentjs.cn/docs/
 日期格式化
 moment().format('MMMM Do YYYY, h:mm:ss a'); // 四月 8日 2019, 11:54:56 中午
 moment().format('dddd');                    // 星期一
