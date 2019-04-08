@@ -35,6 +35,7 @@
     <group title="H5IOSbug">
       <cell title="FixedBug" :link="{path:'/H5IOSFixedBug'}" is-link></cell>
       <cell title="FixedFix" :link="{path:'/H5IOSFixedBugFix'}" is-link></cell>
+      <cell title="bug" :link="{path:'/H5Bug'}" is-link></cell>
     </group>
     <group title="日历例子">
       <cell title="vux-calendar例子" :link="{path:'/vuxCalendar'}" is-link></cell>
