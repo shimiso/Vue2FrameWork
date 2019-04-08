@@ -29,6 +29,16 @@ moment().format('LLL');  // 2019年4月8日中午11点55分
 moment().format('lll');  // 2019年4月8日中午11点55分
 moment().format('LLLL'); // 2019年4月8日星期一中午11点55分
 moment().format('llll'); // 2019年4月8日星期一中午11点55分
+UTC
+moment.utc();
+moment.utc(Number);
+moment.utc(Number[]);
+moment.utc(String);
+moment.utc(String, String);
+moment.utc(String, String[]);
+moment.utc(String, String, String);
+moment.utc(Moment);
+moment.utc(Date);
 
 什么是UTC时间？
 UTC是协调世界时(Universal Time Coordinated)英文缩写，是由国际无线电咨询委员会规定和推荐,
