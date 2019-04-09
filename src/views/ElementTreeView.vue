@@ -13,10 +13,10 @@
           <el-tree :data="data" style="height: 95%;overflow-y: auto" :props="defaultProps" show-checkbox @check-change="handleCheckChange" @node-click="handleNodeClick"></el-tree>
           <flexbox justify="center" style="" class="btns">
             <flexbox-item style="text-align: center">
-              <x-button mini @click.native="drawerVisibility = !drawerVisibility">取消</x-button>
+              <x-button mini @click.native="drawerVisibility = !drawerVisibility;isShow = !isShow">取消</x-button>
             </flexbox-item>
             <flexbox-item style="text-align: center">
-              <x-button mini type="primary" @click.native="drawerVisibility = !drawerVisibility">确定</x-button>
+              <x-button mini type="primary" @click.native="drawerVisibility = !drawerVisibility;isShow = !isShow">确定</x-button>
             </flexbox-item>
           </flexbox>
         </group>
@@ -34,6 +34,10 @@
               <x-icon type="navicon" size="35" style="fill:#fff;position:relative;top:-8px;left:-3px;"></x-icon>
             </span>
         </x-header>
+        <group  v-if="isShow">
+          <cell :title="selectData.data.chineseName"></cell>
+          <cell v-for="(item,index) in selectData.data.childOrgs" :key="index" :title="item.chineseName"></cell>
+        </group>
       </view-box>
     </drawer>
   </div>
@@ -58,6 +62,12 @@
         defaultProps: {
           children: 'childOrgs',
           label: 'chineseName'
+        },
+        isShow:false,
+        selectData:{
+          data:{},
+          selfIsSelected:false,
+          childrenHasSelected:false
         }
       };
     },
@@ -76,11 +86,15 @@
       },
     },
     methods: {
-      handleNodeClick(data) {
+      handleNodeClick(data,node,indeterminate) {
+        //传递给 data 属性的数组中该节点所对应的对象、节点对应的 Node、节点组件本身。
         console.log(data);
       },
       handleCheckChange(data, checked, indeterminate) {//复选框选中事件
-        console.log(data, checked, indeterminate);
+        //共三个参数，依次为：传递给 data 属性的数组中该节点所对应的对象、节点本身是否被选中、节点的子树中是否有被选中的节点
+        this.selectData.data = data
+        this.selectData.selfIsSelected = checked
+        this.selectData.childrenHasSelected = indeterminate
       }
     }
   };

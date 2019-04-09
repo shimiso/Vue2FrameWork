@@ -199,7 +199,7 @@ Description 图片上传及预览组件
               h: parseInt(size[1], 10)
             };
             if (figureEl.children.length > 1) {
-              item.title = figureEl.children[1].innerHTML;
+              // item.title = figureEl.children[1].innerHTML;
             }
             if (linkEl.children.length > 0) {
               item.msrc = linkEl.children[0].getAttribute("src");
