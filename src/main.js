@@ -17,6 +17,9 @@ import Es6Promise from 'es6-promise'
 import { Tree } from 'element-ui';
 import preview from 'vue-photo-preview'
 import 'vue-photo-preview/dist/skin.css'
+
+import Vue2OrgTree from 'vue2-org-tree';
+Vue.use(Vue2OrgTree)
 var options={
   fullscreenEl:false //关闭全屏按钮
 }
