@@ -17,6 +17,7 @@
       <cell title="图片预览" :link="{path:'/photoPreview'}" is-link></cell>
       <cell title="时间格式化" :link="{path:'/momentView'}" is-link></cell>
       <cell title="EvenBus测试例子" :value="evenBusData" :link="{path:'/evenBusTest'}" is-link></cell>
+      <cell title="QuillEditor例子" :value="evenBusData" :link="{path:'/quillEditor'}" is-link></cell>
     </group>
     <group title="菜单例子">
       <cell title="下拉筛选菜单例子"  :link="{path:'/dropDownFilterList'}" is-link></cell>
