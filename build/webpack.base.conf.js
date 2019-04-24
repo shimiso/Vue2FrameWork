@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const webpack = require('webpack')
 const vuxLoader = require('vux-loader')
 
 function resolve (dir) {
@@ -98,7 +99,13 @@ const webpackConfig = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      'window.Quill': 'quill/dist/quill.js',
+      'Quill': 'quill/dist/quill.js'
+    })
+  ]
 }
 
 module.exports = vuxLoader.merge(webpackConfig, {

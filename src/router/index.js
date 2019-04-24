@@ -103,6 +103,10 @@ export default new Router({
       component: resolve => require(['../views/MpvueCalendar.vue'], resolve)
     },
     {
+      path: '/quillEditor',
+      component: resolve => require(['../views/QuillEditorView.vue'], resolve)
+    },
+    {
       path: '/organizationTree',
       component: resolve => require(['../views/OrganizationTree.vue'], resolve)
     }
