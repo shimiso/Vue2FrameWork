@@ -1,12 +1,12 @@
 
 <template>
   <div>
-    <div class="container">
+    <div style="overflow:scroll;min-height:100vh;width:100vw;background:#fff;" class="container">
       <div class="col-md-10 col-md-offset-1">
         <div class="page-header">
-          <h3>基于Vue的组织架构树组件</h3>
+          <h2 style="text-align: center; margin: 20px;font-size: 24px;">乐成组织架构图</h2>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-8 col-md-offset-2">
             <form class="form-horizontal row">
               <div class="col-md-4">
@@ -63,7 +63,7 @@
               </div>
             </form>
           </div>
-        </div>
+        </div> -->
         <p><br></p>
         <div class="text-center">
           <vue2-org-tree name="test"
@@ -81,6 +81,7 @@
   </div>
 </template>
 <script>
+import {org} from "../../static/js/org.js"
 export default {
   data() {
     return {
@@ -134,7 +135,7 @@ export default {
           }
         ]
       },
-      horizontal: false,
+      horizontal: true,
       collapsable: true,
       expandAll: false,
       labelClassName: "bg-lightpink",
@@ -142,6 +143,7 @@ export default {
   },
   methods: {
     renderContent(h, data) {
+      console.log(h(),data,'-----1111111111111111');
       return data.label;
     },
     onExpand(data) {
@@ -156,7 +158,7 @@ export default {
       }
     },
     onNodeClick(e, data) {
-      alert(data.label);
+      // alert(data.label);
     },
     collapse(list) {
       var _this = this;
@@ -186,6 +188,10 @@ export default {
         }
       }
     }
+  },
+  mounted(){
+    this.data = org[0];
+    console.log(org,'==============------------')
   }
 };
 </script>
@@ -206,12 +212,29 @@ export default {
   background-color: gray;
 }
 .bg-lightpink {
-  background-color: lightpink;
+  background-color: #22a1ff;
+  color: #fff;
 }
 .bg-chocolate {
   background-color: chocolate;
 }
 .bg-tomato {
   background-color: tomato;
+}
+.radius>.org-tree-node-label>.org-tree-node-label-inner{
+  border-radius: 80px;
+  /* background: #32a848; */
+  /* background: #ed6b2d; */
+  /* background: red; */
+}
+.orange>.org-tree-node-label>.org-tree-node-label-inner{
+  background: #ed6b2d;
+}
+.green>.org-tree-node-label>.org-tree-node-label-inner{
+  background: #32a848;
+}
+.pink .org-tree-node-label .org-tree-node-label-inner{
+  background: #dfa59a;
+  /* background: red; */
 }
 </style>
