@@ -9,9 +9,7 @@
         </quill-editor>
       </div>
 </template>
-
 <script>
-
   import 'quill/dist/quill.core.css'
   import 'quill/dist/quill.snow.css'
   import 'quill/dist/quill.bubble.css'
@@ -23,6 +21,15 @@
 
   import { ImageDrop } from 'quill-image-drop-module';
   Quill.register('modules/imageDrop', ImageDrop);
+
+  const quillTable = require('quill-table');
+ 
+  Quill.register(quillTable.TableCell);
+  Quill.register(quillTable.TableRow);
+  Quill.register(quillTable.Table);
+  Quill.register(quillTable.Contain);
+  Quill.register('modules/table', quillTable.TableModule);
+
   export default {
     components: {
       quillEditor
@@ -47,7 +54,15 @@
               [{ 'color': [] }, { 'background': [] }],
               [{ 'align': [] }],
               ['clean'],
-              ['link', 'image', 'video']
+              ['link', 'image', 'video'],
+              [
+                { 'table-body': 'TBODY' },
+                { 'table-insert-rows': 'ITR' },
+                { 'table-insert-columns': 'TIC' },
+                { 'table-delete-rows': 'IDR' },
+                { 'table-delete-columns': 'TDC' },
+                { 'table-delete-body': 'TDB' }
+              ]
             ],
             history: {
               delay: 1000,

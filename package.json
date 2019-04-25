@@ -24,6 +24,7 @@
     "quill": "^1.3.6",
     "quill-image-drop-module": "^1.0.3",
     "quill-image-resize-module": "^3.0.0",
+    "quill-table": "^1.0.0",
     "sass-loader": "^7.1.0",
     "superagent": "^4.0.0-beta.5",
     "superagent-jsonp": "^0.2.1",
