@@ -31,7 +31,8 @@
         class="tip">快速熟悉mescroll</span></cell>
     </group>
     <group title="element例子">
-      <cell title="Tree例子" :link="{path:'/elementTreeDemo'}" is-link></cell>
+      <cell title="Tree例子1" :link="{path:'/elementTreeDemo'}" is-link></cell>
+      <cell title="Tree例子2" :link="{path:'/organizationTree'}" is-link></cell>
     </group>
     <group title="H5IOSbug">
       <cell title="FixedBug" :link="{path:'/H5IOSFixedBug'}" is-link></cell>
