@@ -30,6 +30,9 @@
       <cell title="mescroll-options所有配置" :link="{path:'/mescrollOptions'}" is-link><span
         class="tip">快速熟悉mescroll</span></cell>
     </group>
+    <group title="电子签名">
+      <cell title="签名例子" :link="{path:'/autograph'}" is-link></cell>
+    </group>
     <group title="element例子">
       <cell title="Tree例子1" :link="{path:'/elementTreeDemo'}" is-link></cell>
       <cell title="Tree例子2" :link="{path:'/organizationTree'}" is-link></cell>

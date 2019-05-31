@@ -109,6 +109,10 @@ export default new Router({
     {
       path: '/organizationTree',
       component: resolve => require(['../views/OrganizationTree.vue'], resolve)
+    },
+    {
+      path: '/autograph',
+      component: resolve => require(['../views/autograph.vue'], resolve)
     }
   ]
 })
