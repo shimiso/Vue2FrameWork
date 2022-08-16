@@ -1,990 +1,989 @@
 export const orgStructList = [{
-  "orgId": 1,
-  "chineseName": "乐成集团",
-  "childOrgs": [{
-    "orgId": 2,
-    "chineseName": "集团本部",
-    "childOrgs": [{
-      "orgId": 33,
-      "chineseName": "人力资源中心",
-      "childOrgs": null
+  'orgId': 1,
+  'chineseName': '乐成集团',
+  'childOrgs': [{
+    'orgId': 2,
+    'chineseName': '集团本部',
+    'childOrgs': [{
+      'orgId': 33,
+      'chineseName': '人力资源中心',
+      'childOrgs': null
     }, {
-      "orgId": 35,
-      "chineseName": "战略投资中心",
-      "childOrgs": null
+      'orgId': 35,
+      'chineseName': '战略投资中心',
+      'childOrgs': null
     }, {
-      "orgId": 42,
-      "chineseName": "办公室",
-      "childOrgs": null
+      'orgId': 42,
+      'chineseName': '办公室',
+      'childOrgs': null
     }, {
-      "orgId": 23,
-      "chineseName": "经营管理层",
-      "childOrgs": null
+      'orgId': 23,
+      'chineseName': '经营管理层',
+      'childOrgs': null
     }, {
-      "orgId": 26,
-      "chineseName": "资金财务中心",
-      "childOrgs": null
+      'orgId': 26,
+      'chineseName': '资金财务中心',
+      'childOrgs': null
     }, {
-      "orgId": 31,
-      "chineseName": "信息技术中心",
-      "childOrgs": [{
-        "orgId": 98,
-        "chineseName": "IT服务中心",
-        "childOrgs": null
+      'orgId': 31,
+      'chineseName': '信息技术中心',
+      'childOrgs': [{
+        'orgId': 98,
+        'chineseName': 'IT服务中心',
+        'childOrgs': null
       }, {
-        "orgId": 90,
-        "chineseName": "研发中心",
-        "childOrgs": null
+        'orgId': 90,
+        'chineseName': '研发中心',
+        'childOrgs': null
       }]
     }, {
-      "orgId": 32,
-      "chineseName": "审计监察中心",
-      "childOrgs": null
+      'orgId': 32,
+      'chineseName': '审计监察中心',
+      'childOrgs': null
     }, {
-      "orgId": 1189,
-      "chineseName": "建设中心",
-      "childOrgs": [{
-        "orgId": 1195,
-        "chineseName": "乐成中心项目部",
-        "childOrgs": null
+      'orgId': 1189,
+      'chineseName': '建设中心',
+      'childOrgs': [{
+        'orgId': 1195,
+        'chineseName': '乐成中心项目部',
+        'childOrgs': null
       }, {
-        "orgId": 1196,
-        "chineseName": "成本部",
-        "childOrgs": null
+        'orgId': 1196,
+        'chineseName': '成本部',
+        'childOrgs': null
       }, {
-        "orgId": 1197,
-        "chineseName": "半壁店项目部",
-        "childOrgs": null
+        'orgId': 1197,
+        'chineseName': '半壁店项目部',
+        'childOrgs': null
       }, {
-        "orgId": 1263,
-        "chineseName": "招采部",
-        "childOrgs": null
+        'orgId': 1263,
+        'chineseName': '招采部',
+        'childOrgs': null
       }, {
-        "orgId": 1190,
-        "chineseName": "双桥幼儿园项目部",
-        "childOrgs": null
+        'orgId': 1190,
+        'chineseName': '双桥幼儿园项目部',
+        'childOrgs': null
       }, {
-        "orgId": 1192,
-        "chineseName": "设计部",
-        "childOrgs": null
+        'orgId': 1192,
+        'chineseName': '设计部',
+        'childOrgs': null
       }, {
-        "orgId": 1193,
-        "chineseName": "前期部",
-        "childOrgs": null
+        'orgId': 1193,
+        'chineseName': '前期部',
+        'childOrgs': null
       }, {
-        "orgId": 1194,
-        "chineseName": "综合部",
-        "childOrgs": null
+        'orgId': 1194,
+        'chineseName': '综合部',
+        'childOrgs': null
       }]
     }, {
-      "orgId": 1289,
-      "chineseName": "党委办公室",
-      "childOrgs": null
+      'orgId': 1289,
+      'chineseName': '党委办公室',
+      'childOrgs': null
     }]
   }, {
-    "orgId": 3,
-    "chineseName": "资产事业部",
-    "childOrgs": [{
-      "orgId": 7,
-      "chineseName": "租赁运营部",
-      "childOrgs": null
+    'orgId': 3,
+    'chineseName': '资产事业部',
+    'childOrgs': [{
+      'orgId': 7,
+      'chineseName': '租赁运营部',
+      'childOrgs': null
     }, {
-      "orgId": 8,
-      "chineseName": "招商运营部",
-      "childOrgs": null
+      'orgId': 8,
+      'chineseName': '招商运营部',
+      'childOrgs': null
     }, {
-      "orgId": 1019,
-      "chineseName": "公寓运营部",
-      "childOrgs": null
+      'orgId': 1019,
+      'chineseName': '公寓运营部',
+      'childOrgs': null
     }, {
-      "orgId": 17,
-      "chineseName": "集团办公楼、员工宿舍物业服务项目",
-      "childOrgs": [{
-        "orgId": 76,
-        "chineseName": "集团办公楼员工宿舍双桥1752",
-        "childOrgs": null
+      'orgId': 17,
+      'chineseName': '集团办公楼、员工宿舍物业服务项目',
+      'childOrgs': [{
+        'orgId': 76,
+        'chineseName': '集团办公楼员工宿舍双桥1752',
+        'childOrgs': null
       }]
     }, {
-      "orgId": 18,
-      "chineseName": "国际学校物业服务项目",
-      "childOrgs": [{
-        "orgId": 54,
-        "chineseName": "国际学校项目",
-        "childOrgs": [{
-          "orgId": 108,
-          "chineseName": "工程部",
-          "childOrgs": null
+      'orgId': 18,
+      'chineseName': '国际学校物业服务项目',
+      'childOrgs': [{
+        'orgId': 54,
+        'chineseName': '国际学校项目',
+        'childOrgs': [{
+          'orgId': 108,
+          'chineseName': '工程部',
+          'childOrgs': null
         }, {
-          "orgId": 111,
-          "chineseName": "项目办公室",
-          "childOrgs": null
+          'orgId': 111,
+          'chineseName': '项目办公室',
+          'childOrgs': null
         }, {
-          "orgId": 112,
-          "chineseName": "客服部",
-          "childOrgs": null
+          'orgId': 112,
+          'chineseName': '客服部',
+          'childOrgs': null
         }, {
-          "orgId": 114,
-          "chineseName": "安保部",
-          "childOrgs": null
+          'orgId': 114,
+          'chineseName': '安保部',
+          'childOrgs': null
         }]
       }]
     }, {
-      "orgId": 19,
-      "chineseName": "管理班子",
-      "childOrgs": null
+      'orgId': 19,
+      'chineseName': '管理班子',
+      'childOrgs': null
     }, {
-      "orgId": 20,
-      "chineseName": "工程管理部",
-      "childOrgs": null
+      'orgId': 20,
+      'chineseName': '工程管理部',
+      'childOrgs': null
     }, {
-      "orgId": 21,
-      "chineseName": "财务部",
-      "childOrgs": null
+      'orgId': 21,
+      'chineseName': '财务部',
+      'childOrgs': null
     }, {
-      "orgId": 24,
-      "chineseName": "招采部",
-      "childOrgs": null
+      'orgId': 24,
+      'chineseName': '招采部',
+      'childOrgs': null
     }, {
-      "orgId": 1249,
-      "chineseName": "投资拓展部",
-      "childOrgs": null
+      'orgId': 1249,
+      'chineseName': '投资拓展部',
+      'childOrgs': null
     }, {
-      "orgId": 11,
-      "chineseName": "双桥恭和家园样板间物业服务项目",
-      "childOrgs": null
+      'orgId': 11,
+      'chineseName': '双桥恭和家园样板间物业服务项目',
+      'childOrgs': null
     }, {
-      "orgId": 12,
-      "chineseName": "双桥恭和家园物业服务项目",
-      "childOrgs": [{
-        "orgId": 68,
-        "chineseName": "项目办公室",
-        "childOrgs": null
+      'orgId': 12,
+      'chineseName': '双桥恭和家园物业服务项目',
+      'childOrgs': [{
+        'orgId': 68,
+        'chineseName': '项目办公室',
+        'childOrgs': null
       }, {
-        "orgId": 69,
-        "chineseName": "客服部",
-        "childOrgs": null
+        'orgId': 69,
+        'chineseName': '客服部',
+        'childOrgs': null
       }, {
-        "orgId": 70,
-        "chineseName": "工程部",
-        "childOrgs": null
+        'orgId': 70,
+        'chineseName': '工程部',
+        'childOrgs': null
       }, {
-        "orgId": 71,
-        "chineseName": "安保部",
-        "childOrgs": null
+        'orgId': 71,
+        'chineseName': '安保部',
+        'childOrgs': null
       }]
     }, {
-      "orgId": 13,
-      "chineseName": "双井地区养老物业服务项目",
-      "childOrgs": [{
-        "orgId": 72,
-        "chineseName": "医疗中心",
-        "childOrgs": null
+      'orgId': 13,
+      'chineseName': '双井地区养老物业服务项目',
+      'childOrgs': [{
+        'orgId': 72,
+        'chineseName': '医疗中心',
+        'childOrgs': null
       }, {
-        "orgId": 73,
-        "chineseName": "项目办公室",
-        "childOrgs": null
+        'orgId': 73,
+        'chineseName': '项目办公室',
+        'childOrgs': null
       }, {
-        "orgId": 74,
-        "chineseName": "双井恭和苑项目",
-        "childOrgs": null
+        'orgId': 74,
+        'chineseName': '双井恭和苑项目',
+        'childOrgs': null
       }, {
-        "orgId": 75,
-        "chineseName": "朝阳二福项目",
-        "childOrgs": null
+        'orgId': 75,
+        'chineseName': '朝阳二福项目',
+        'childOrgs': null
       }]
     }, {
-      "orgId": 14,
-      "chineseName": "人事行政部",
-      "childOrgs": null
+      'orgId': 14,
+      'chineseName': '人事行政部',
+      'childOrgs': null
     }, {
-      "orgId": 15,
-      "chineseName": "物业运营管理部",
-      "childOrgs": null
+      'orgId': 15,
+      'chineseName': '物业运营管理部',
+      'childOrgs': null
     }, {
-      "orgId": 16,
-      "chineseName": "乐成中心物业服务项目",
-      "childOrgs": [{
-        "orgId": 58,
-        "chineseName": "乐成中心项目",
-        "childOrgs": [{
-          "orgId": 100,
-          "chineseName": "安保部",
-          "childOrgs": null
+      'orgId': 16,
+      'chineseName': '乐成中心物业服务项目',
+      'childOrgs': [{
+        'orgId': 58,
+        'chineseName': '乐成中心项目',
+        'childOrgs': [{
+          'orgId': 100,
+          'chineseName': '安保部',
+          'childOrgs': null
         }, {
-          "orgId": 101,
-          "chineseName": "工程部",
-          "childOrgs": null
+          'orgId': 101,
+          'chineseName': '工程部',
+          'childOrgs': null
         }, {
-          "orgId": 103,
-          "chineseName": "项目办公室",
-          "childOrgs": null
+          'orgId': 103,
+          'chineseName': '项目办公室',
+          'childOrgs': null
         }, {
-          "orgId": 106,
-          "chineseName": "客服部",
-          "childOrgs": null
+          'orgId': 106,
+          'chineseName': '客服部',
+          'childOrgs': null
         }]
       }]
     }, {
-      "orgId": 1369,
-      "chineseName": "市场部",
-      "childOrgs": null
+      'orgId': 1369,
+      'chineseName': '市场部',
+      'childOrgs': null
     }]
   }, {
-    "orgId": 4,
-    "chineseName": "教育事业部",
-    "childOrgs": [{
-      "orgId": 39,
-      "chineseName": "教育公司",
-      "childOrgs": [{
-        "orgId": 60,
-        "chineseName": "财务部",
-        "childOrgs": null
+    'orgId': 4,
+    'chineseName': '教育事业部',
+    'childOrgs': [{
+      'orgId': 39,
+      'chineseName': '教育公司',
+      'childOrgs': [{
+        'orgId': 60,
+        'chineseName': '财务部',
+        'childOrgs': null
       }, {
-        "orgId": 78,
-        "chineseName": "办公室",
-        "childOrgs": null
+        'orgId': 78,
+        'chineseName': '办公室',
+        'childOrgs': null
       }, {
-        "orgId": 57,
-        "chineseName": "幼儿教育连锁",
-        "childOrgs": [{
-          "orgId": 126,
-          "chineseName": "乐学前沿",
-          "childOrgs": null
+        'orgId': 57,
+        'chineseName': '幼儿教育连锁',
+        'childOrgs': [{
+          'orgId': 126,
+          'chineseName': '乐学前沿',
+          'childOrgs': null
         }, {
-          "orgId": 127,
-          "chineseName": "乐读前沿",
-          "childOrgs": null
+          'orgId': 127,
+          'chineseName': '乐读前沿',
+          'childOrgs': null
         }, {
-          "orgId": 128,
-          "chineseName": "乐成幼儿园",
-          "childOrgs": null
+          'orgId': 128,
+          'chineseName': '乐成幼儿园',
+          'childOrgs': null
         }, {
-          "orgId": 129,
-          "chineseName": "管理班子",
-          "childOrgs": null
+          'orgId': 129,
+          'chineseName': '管理班子',
+          'childOrgs': null
         }]
       }, {
-        "orgId": 59,
-        "chineseName": "管理班子",
-        "childOrgs": null
+        'orgId': 59,
+        'chineseName': '管理班子',
+        'childOrgs': null
       }]
     }, {
-      "orgId": 40,
-      "chineseName": "YERI",
-      "childOrgs": null
+      'orgId': 40,
+      'chineseName': 'YERI',
+      'childOrgs': null
     }, {
-      "orgId": 43,
-      "chineseName": "研究院",
-      "childOrgs": null
+      'orgId': 43,
+      'chineseName': '研究院',
+      'childOrgs': null
     }, {
-      "orgId": 28,
-      "chineseName": "BCIS",
-      "childOrgs": [{
-        "orgId": 61,
-        "chineseName": "BOD",
-        "childOrgs": null
+      'orgId': 28,
+      'chineseName': 'BCIS',
+      'childOrgs': [{
+        'orgId': 61,
+        'chineseName': 'BOD',
+        'childOrgs': null
       }, {
-        "orgId": 62,
-        "chineseName": "Communications",
-        "childOrgs": [{
-          "orgId": 131,
-          "chineseName": "IT",
-          "childOrgs": null
+        'orgId': 62,
+        'chineseName': 'Communications',
+        'childOrgs': [{
+          'orgId': 131,
+          'chineseName': 'IT',
+          'childOrgs': null
         }, {
-          "orgId": 132,
-          "chineseName": "Admissions",
-          "childOrgs": null
+          'orgId': 132,
+          'chineseName': 'Admissions',
+          'childOrgs': null
         }, {
-          "orgId": 133,
-          "chineseName": "Marketing",
-          "childOrgs": null
+          'orgId': 133,
+          'chineseName': 'Marketing',
+          'childOrgs': null
         }]
       }, {
-        "orgId": 63,
-        "chineseName": "Operations",
-        "childOrgs": [{
-          "orgId": 134,
-          "chineseName": "PM",
-          "childOrgs": null
+        'orgId': 63,
+        'chineseName': 'Operations',
+        'childOrgs': [{
+          'orgId': 134,
+          'chineseName': 'PM',
+          'childOrgs': null
         }, {
-          "orgId": 135,
-          "chineseName": "FIN",
-          "childOrgs": null
+          'orgId': 135,
+          'chineseName': 'FIN',
+          'childOrgs': null
         }, {
-          "orgId": 136,
-          "chineseName": "GA",
-          "childOrgs": null
+          'orgId': 136,
+          'chineseName': 'GA',
+          'childOrgs': null
         }, {
-          "orgId": 137,
-          "chineseName": "PA",
-          "childOrgs": null
+          'orgId': 137,
+          'chineseName': 'PA',
+          'childOrgs': null
         }, {
-          "orgId": 138,
-          "chineseName": "HR",
-          "childOrgs": null
+          'orgId': 138,
+          'chineseName': 'HR',
+          'childOrgs': null
         }]
       }, {
-        "orgId": 64,
-        "chineseName": "HoS",
-        "childOrgs": null
+        'orgId': 64,
+        'chineseName': 'HoS',
+        'childOrgs': null
       }, {
-        "orgId": 65,
-        "chineseName": "ECC",
-        "childOrgs": null
+        'orgId': 65,
+        'chineseName': 'ECC',
+        'childOrgs': null
       }, {
-        "orgId": 66,
-        "chineseName": "ES",
-        "childOrgs": null
+        'orgId': 66,
+        'chineseName': 'ES',
+        'childOrgs': null
       }, {
-        "orgId": 67,
-        "chineseName": "SS",
-        "childOrgs": null
+        'orgId': 67,
+        'chineseName': 'SS',
+        'childOrgs': null
       }, {
-        "orgId": 1065,
-        "chineseName": "Chinese Director",
-        "childOrgs": null
+        'orgId': 1065,
+        'chineseName': 'Chinese Director',
+        'childOrgs': null
       }, {
-        "orgId": 1484,
-        "chineseName": "AA",
-        "childOrgs": null
+        'orgId': 1484,
+        'chineseName': 'AA',
+        'childOrgs': null
       }]
     }]
   }, {
-    "orgId": 5,
-    "chineseName": "老年投资",
-    "childOrgs": [{
-      "orgId": 6,
-      "chineseName": "集中式居家养老社区事业部",
-      "childOrgs": [{
-        "orgId": 1014,
-        "chineseName": "人力资源部",
-        "childOrgs": null
+    'orgId': 5,
+    'chineseName': '老年投资',
+    'childOrgs': [{
+      'orgId': 6,
+      'chineseName': '集中式居家养老社区事业部',
+      'childOrgs': [{
+        'orgId': 1014,
+        'chineseName': '人力资源部',
+        'childOrgs': null
       }, {
-        "orgId": 80,
-        "chineseName": "运营管理部",
-        "childOrgs": null
+        'orgId': 80,
+        'chineseName': '运营管理部',
+        'childOrgs': null
       }, {
-        "orgId": 82,
-        "chineseName": "销售部",
-        "childOrgs": null
+        'orgId': 82,
+        'chineseName': '销售部',
+        'childOrgs': null
       }, {
-        "orgId": 86,
-        "chineseName": "双桥恭和家园",
-        "childOrgs": [{
-          "orgId": 139,
-          "chineseName": "财务部",
-          "childOrgs": null
+        'orgId': 86,
+        'chineseName': '双桥恭和家园',
+        'childOrgs': [{
+          'orgId': 139,
+          'chineseName': '财务部',
+          'childOrgs': null
         }, {
-          "orgId": 140,
-          "chineseName": "餐饮部",
-          "childOrgs": null
+          'orgId': 140,
+          'chineseName': '餐饮部',
+          'childOrgs': null
         }, {
-          "orgId": 1022,
-          "chineseName": "物业部",
-          "childOrgs": null
+          'orgId': 1022,
+          'chineseName': '物业部',
+          'childOrgs': null
         }, {
-          "orgId": 141,
-          "chineseName": "社工部",
-          "childOrgs": null
+          'orgId': 141,
+          'chineseName': '社工部',
+          'childOrgs': null
         }, {
-          "orgId": 142,
-          "chineseName": "医疗养护部",
-          "childOrgs": null
+          'orgId': 142,
+          'chineseName': '医疗养护部',
+          'childOrgs': null
         }, {
-          "orgId": 143,
-          "chineseName": "院办",
-          "childOrgs": null
+          'orgId': 143,
+          'chineseName': '院办',
+          'childOrgs': null
         }, {
-          "orgId": 123,
-          "chineseName": "综合部",
-          "childOrgs": null
+          'orgId': 123,
+          'chineseName': '综合部',
+          'childOrgs': null
         }]
       }, {
-        "orgId": 89,
-        "chineseName": "财务部",
-        "childOrgs": null
+        'orgId': 89,
+        'chineseName': '财务部',
+        'childOrgs': null
       }]
     }, {
-      "orgId": 34,
-      "chineseName": "人力资源管理中心",
-      "childOrgs": null
+      'orgId': 34,
+      'chineseName': '人力资源管理中心',
+      'childOrgs': null
     }, {
-      "orgId": 36,
-      "chineseName": "资金财务中心",
-      "childOrgs": null
+      'orgId': 36,
+      'chineseName': '资金财务中心',
+      'childOrgs': null
     }, {
-      "orgId": 37,
-      "chineseName": "招标采购中心",
-      "childOrgs": null
+      'orgId': 37,
+      'chineseName': '招标采购中心',
+      'childOrgs': null
     }, {
-      "orgId": 38,
-      "chineseName": "办公室",
-      "childOrgs": null
+      'orgId': 38,
+      'chineseName': '办公室',
+      'childOrgs': null
     }, {
-      "orgId": 1044,
-      "chineseName": "公共事务管理中心",
-      "childOrgs": null
+      'orgId': 1044,
+      'chineseName': '公共事务管理中心',
+      'childOrgs': null
     }, {
-      "orgId": 1018,
-      "chineseName": "技术及产品研发中心",
-      "childOrgs": null
+      'orgId': 1018,
+      'chineseName': '技术及产品研发中心',
+      'childOrgs': null
     }, {
-      "orgId": 22,
-      "chineseName": "培训学校",
-      "childOrgs": [{
-        "orgId": 994,
-        "chineseName": "校办",
-        "childOrgs": null
+      'orgId': 22,
+      'chineseName': '培训学校',
+      'childOrgs': [{
+        'orgId': 994,
+        'chineseName': '校办',
+        'childOrgs': null
       }, {
-        "orgId": 47,
-        "chineseName": "项目部",
-        "childOrgs": null
+        'orgId': 47,
+        'chineseName': '项目部',
+        'childOrgs': null
       }, {
-        "orgId": 1071,
-        "chineseName": "教研室",
-        "childOrgs": null
+        'orgId': 1071,
+        'chineseName': '教研室',
+        'childOrgs': null
       }, {
-        "orgId": 1072,
-        "chineseName": "教学部",
-        "childOrgs": null
+        'orgId': 1072,
+        'chineseName': '教学部',
+        'childOrgs': null
       }, {
-        "orgId": 1073,
-        "chineseName": "总务处",
-        "childOrgs": null
+        'orgId': 1073,
+        'chineseName': '总务处',
+        'childOrgs': null
       }]
     }, {
-      "orgId": 25,
-      "chineseName": "经营班子",
-      "childOrgs": null
+      'orgId': 25,
+      'chineseName': '经营班子',
+      'childOrgs': null
     }, {
-      "orgId": 29,
-      "chineseName": "品牌管理中心",
-      "childOrgs": null
+      'orgId': 29,
+      'chineseName': '品牌管理中心',
+      'childOrgs': null
     }, {
-      "orgId": 9,
-      "chineseName": "养老机构事业部",
-      "childOrgs": [{
-        "orgId": 46,
-        "chineseName": "海口恭和苑",
-        "childOrgs": [{
-          "orgId": 192,
-          "chineseName": "财务部",
-          "childOrgs": null
+      'orgId': 9,
+      'chineseName': '养老机构事业部',
+      'childOrgs': [{
+        'orgId': 46,
+        'chineseName': '海口恭和苑',
+        'childOrgs': [{
+          'orgId': 192,
+          'chineseName': '财务部',
+          'childOrgs': null
         }, {
-          "orgId": 193,
-          "chineseName": "客服部",
-          "childOrgs": null
+          'orgId': 193,
+          'chineseName': '客服部',
+          'childOrgs': null
         }, {
-          "orgId": 194,
-          "chineseName": "社工部",
-          "childOrgs": null
+          'orgId': 194,
+          'chineseName': '社工部',
+          'childOrgs': null
         }, {
-          "orgId": 196,
-          "chineseName": "养护部",
-          "childOrgs": null
+          'orgId': 196,
+          'chineseName': '养护部',
+          'childOrgs': null
         }, {
-          "orgId": 197,
-          "chineseName": "医疗部",
-          "childOrgs": null
+          'orgId': 197,
+          'chineseName': '医疗部',
+          'childOrgs': null
         }, {
-          "orgId": 198,
-          "chineseName": "营销部",
-          "childOrgs": null
+          'orgId': 198,
+          'chineseName': '营销部',
+          'childOrgs': null
         }, {
-          "orgId": 199,
-          "chineseName": "院办",
-          "childOrgs": null
+          'orgId': 199,
+          'chineseName': '院办',
+          'childOrgs': null
         }, {
-          "orgId": 200,
-          "chineseName": "综合部",
-          "childOrgs": null
+          'orgId': 200,
+          'chineseName': '综合部',
+          'childOrgs': null
         }, {
-          "orgId": 202,
-          "chineseName": "餐饮部",
-          "childOrgs": null
+          'orgId': 202,
+          'chineseName': '餐饮部',
+          'childOrgs': null
         }]
       }, {
-        "orgId": 1020,
-        "chineseName": "人力资源部",
-        "childOrgs": null
+        'orgId': 1020,
+        'chineseName': '人力资源部',
+        'childOrgs': null
       }, {
-        "orgId": 1021,
-        "chineseName": "财务部",
-        "childOrgs": null
+        'orgId': 1021,
+        'chineseName': '财务部',
+        'childOrgs': null
       }, {
-        "orgId": 48,
-        "chineseName": "双井恭和苑",
-        "childOrgs": [{
-          "orgId": 164,
-          "chineseName": "人力资源部",
-          "childOrgs": null
+        'orgId': 48,
+        'chineseName': '双井恭和苑',
+        'childOrgs': [{
+          'orgId': 164,
+          'chineseName': '人力资源部',
+          'childOrgs': null
         }, {
-          "orgId": 189,
-          "chineseName": "综合部",
-          "childOrgs": null
+          'orgId': 189,
+          'chineseName': '综合部',
+          'childOrgs': null
         }, {
-          "orgId": 190,
-          "chineseName": "院办",
-          "childOrgs": null
+          'orgId': 190,
+          'chineseName': '院办',
+          'childOrgs': null
         }, {
-          "orgId": 179,
-          "chineseName": "社工部",
-          "childOrgs": [{
-            "orgId": 205,
-            "chineseName": "客服组",
-            "childOrgs": null
+          'orgId': 179,
+          'chineseName': '社工部',
+          'childOrgs': [{
+            'orgId': 205,
+            'chineseName': '客服组',
+            'childOrgs': null
           }, {
-            "orgId": 221,
-            "chineseName": "社工组",
-            "childOrgs": null
+            'orgId': 221,
+            'chineseName': '社工组',
+            'childOrgs': null
           }]
         }, {
-          "orgId": 180,
-          "chineseName": "财务部",
-          "childOrgs": null
+          'orgId': 180,
+          'chineseName': '财务部',
+          'childOrgs': null
         }, {
-          "orgId": 152,
-          "chineseName": "餐饮部",
-          "childOrgs": [{
-            "orgId": 206,
-            "chineseName": "前厅",
-            "childOrgs": null
+          'orgId': 152,
+          'chineseName': '餐饮部',
+          'childOrgs': [{
+            'orgId': 206,
+            'chineseName': '前厅',
+            'childOrgs': null
           }, {
-            "orgId": 207,
-            "chineseName": "后厨",
-            "childOrgs": null
+            'orgId': 207,
+            'chineseName': '后厨',
+            'childOrgs': null
           }]
         }, {
-          "orgId": 201,
-          "chineseName": "养护部",
-          "childOrgs": [{
-            "orgId": 209,
-            "chineseName": "养护部二区",
-            "childOrgs": null
+          'orgId': 201,
+          'chineseName': '养护部',
+          'childOrgs': [{
+            'orgId': 209,
+            'chineseName': '养护部二区',
+            'childOrgs': null
           }, {
-            "orgId": 210,
-            "chineseName": "养护部六区",
-            "childOrgs": null
+            'orgId': 210,
+            'chineseName': '养护部六区',
+            'childOrgs': null
           }, {
-            "orgId": 211,
-            "chineseName": "养护部三区",
-            "childOrgs": null
+            'orgId': 211,
+            'chineseName': '养护部三区',
+            'childOrgs': null
           }, {
-            "orgId": 213,
-            "chineseName": "养护部五区",
-            "childOrgs": null
+            'orgId': 213,
+            'chineseName': '养护部五区',
+            'childOrgs': null
           }, {
-            "orgId": 208,
-            "chineseName": "养护部八区",
-            "childOrgs": null
+            'orgId': 208,
+            'chineseName': '养护部八区',
+            'childOrgs': null
           }]
         }]
       }, {
-        "orgId": 49,
-        "chineseName": "恭和老年公寓",
-        "childOrgs": [{
-          "orgId": 157,
-          "chineseName": "卫生服务站",
-          "childOrgs": null
+        'orgId': 49,
+        'chineseName': '恭和老年公寓',
+        'childOrgs': [{
+          'orgId': 157,
+          'chineseName': '卫生服务站',
+          'childOrgs': null
         }, {
-          "orgId": 158,
-          "chineseName": "社工部",
-          "childOrgs": [{
-            "orgId": 214,
-            "chineseName": "客服组",
-            "childOrgs": null
+          'orgId': 158,
+          'chineseName': '社工部',
+          'childOrgs': [{
+            'orgId': 214,
+            'chineseName': '客服组',
+            'childOrgs': null
           }, {
-            "orgId": 220,
-            "chineseName": "社工组",
-            "childOrgs": null
+            'orgId': 220,
+            'chineseName': '社工组',
+            'childOrgs': null
           }]
         }, {
-          "orgId": 159,
-          "chineseName": "人力资源部",
-          "childOrgs": null
+          'orgId': 159,
+          'chineseName': '人力资源部',
+          'childOrgs': null
         }, {
-          "orgId": 160,
-          "chineseName": "护理部",
-          "childOrgs": [{
-            "orgId": 216,
-            "chineseName": "养护部四区",
-            "childOrgs": null
+          'orgId': 160,
+          'chineseName': '护理部',
+          'childOrgs': [{
+            'orgId': 216,
+            'chineseName': '养护部四区',
+            'childOrgs': null
           }, {
-            "orgId": 217,
-            "chineseName": "养护部一区",
-            "childOrgs": null
+            'orgId': 217,
+            'chineseName': '养护部一区',
+            'childOrgs': null
           }, {
-            "orgId": 218,
-            "chineseName": "养护部三区",
-            "childOrgs": null
+            'orgId': 218,
+            'chineseName': '养护部三区',
+            'childOrgs': null
           }, {
-            "orgId": 219,
-            "chineseName": "养护部二区",
-            "childOrgs": null
+            'orgId': 219,
+            'chineseName': '养护部二区',
+            'childOrgs': null
           }]
         }, {
-          "orgId": 161,
-          "chineseName": "餐饮部",
-          "childOrgs": [{
-            "orgId": 212,
-            "chineseName": "后厨",
-            "childOrgs": null
+          'orgId': 161,
+          'chineseName': '餐饮部',
+          'childOrgs': [{
+            'orgId': 212,
+            'chineseName': '后厨',
+            'childOrgs': null
           }, {
-            "orgId": 204,
-            "chineseName": "前厅",
-            "childOrgs": null
+            'orgId': 204,
+            'chineseName': '前厅',
+            'childOrgs': null
           }]
         }, {
-          "orgId": 162,
-          "chineseName": "财务部",
-          "childOrgs": null
+          'orgId': 162,
+          'chineseName': '财务部',
+          'childOrgs': null
         }, {
-          "orgId": 181,
-          "chineseName": "院办",
-          "childOrgs": null
+          'orgId': 181,
+          'chineseName': '院办',
+          'childOrgs': null
         }, {
-          "orgId": 155,
-          "chineseName": "综合部",
-          "childOrgs": null
+          'orgId': 155,
+          'chineseName': '综合部',
+          'childOrgs': null
         }]
       }, {
-        "orgId": 50,
-        "chineseName": "运营管理部",
-        "childOrgs": null
+        'orgId': 50,
+        'chineseName': '运营管理部',
+        'childOrgs': null
       }, {
-        "orgId": 53,
-        "chineseName": "营销部",
-        "childOrgs": null
+        'orgId': 53,
+        'chineseName': '营销部',
+        'childOrgs': null
       }, {
-        "orgId": 56,
-        "chineseName": "慈溪恭和苑",
-        "childOrgs": [{
-          "orgId": 191,
-          "chineseName": "餐饮部",
-          "childOrgs": null
+        'orgId': 56,
+        'chineseName': '慈溪恭和苑',
+        'childOrgs': [{
+          'orgId': 191,
+          'chineseName': '餐饮部',
+          'childOrgs': null
         }, {
-          "orgId": 182,
-          "chineseName": "社工部",
-          "childOrgs": null
+          'orgId': 182,
+          'chineseName': '社工部',
+          'childOrgs': null
         }, {
-          "orgId": 184,
-          "chineseName": "养护部",
-          "childOrgs": null
+          'orgId': 184,
+          'chineseName': '养护部',
+          'childOrgs': null
         }, {
-          "orgId": 185,
-          "chineseName": "医疗部",
-          "childOrgs": null
+          'orgId': 185,
+          'chineseName': '医疗部',
+          'childOrgs': null
         }, {
-          "orgId": 186,
-          "chineseName": "院办",
-          "childOrgs": null
+          'orgId': 186,
+          'chineseName': '院办',
+          'childOrgs': null
         }, {
-          "orgId": 187,
-          "chineseName": "综合部",
-          "childOrgs": null
+          'orgId': 187,
+          'chineseName': '综合部',
+          'childOrgs': null
         }, {
-          "orgId": 203,
-          "chineseName": "财务部",
-          "childOrgs": null
-        }]
-      }]
-    }, {
-      "orgId": 10,
-      "chineseName": "社区医疗事业部",
-      "childOrgs": [{
-        "orgId": 1015,
-        "chineseName": "人力资源部",
-        "childOrgs": null
-      }, {
-        "orgId": 77,
-        "chineseName": "居家医养项目部",
-        "childOrgs": [{
-          "orgId": 1294,
-          "chineseName": "居家服务组",
-          "childOrgs": null
-        }, {
-          "orgId": 1297,
-          "chineseName": "社区巡诊组",
-          "childOrgs": null
-        }, {
-          "orgId": 1298,
-          "chineseName": "政府项目组",
-          "childOrgs": null
-        }, {
-          "orgId": 1299,
-          "chineseName": "医养通运营组",
-          "childOrgs": null
-        }]
-      }, {
-        "orgId": 79,
-        "chineseName": "财务部",
-        "childOrgs": null
-      }, {
-        "orgId": 84,
-        "chineseName": "运营管理部",
-        "childOrgs": null
-      }, {
-        "orgId": 87,
-        "chineseName": "房山",
-        "childOrgs": [{
-          "orgId": 104,
-          "chineseName": "客服部",
-          "childOrgs": null
-        }, {
-          "orgId": 146,
-          "chineseName": "财务部",
-          "childOrgs": null
-        }, {
-          "orgId": 1047,
-          "chineseName": "医保部",
-          "childOrgs": null
-        }, {
-          "orgId": 109,
-          "chineseName": "人力资源部",
-          "childOrgs": null
-        }, {
-          "orgId": 110,
-          "chineseName": "市场部",
-          "childOrgs": null
-        }, {
-          "orgId": 113,
-          "chineseName": "办公室",
-          "childOrgs": null
-        }, {
-          "orgId": 115,
-          "chineseName": "信息办",
-          "childOrgs": null
-        }, {
-          "orgId": 122,
-          "chineseName": "院办",
-          "childOrgs": null
-        }, {
-          "orgId": 1087,
-          "chineseName": "医务部",
-          "childOrgs": [{
-            "orgId": 1090,
-            "chineseName": "护理部",
-            "childOrgs": null
-          }, {
-            "orgId": 1091,
-            "chineseName": "检验科",
-            "childOrgs": null
-          }, {
-            "orgId": 1092,
-            "chineseName": "门诊部",
-            "childOrgs": [{
-              "orgId": 1137,
-              "chineseName": "妇科",
-              "childOrgs": null
-            }, {
-              "orgId": 1138,
-              "chineseName": "全科／内科",
-              "childOrgs": null
-            }, {
-              "orgId": 1139,
-              "chineseName": "外科",
-              "childOrgs": null
-            }, {
-              "orgId": 1140,
-              "chineseName": "理疗科",
-              "childOrgs": null
-            }, {
-              "orgId": 1141,
-              "chineseName": "康复科",
-              "childOrgs": null
-            }, {
-              "orgId": 1095,
-              "chineseName": "儿科",
-              "childOrgs": null
-            }, {
-              "orgId": 1096,
-              "chineseName": "口腔科",
-              "childOrgs": null
-            }, {
-              "orgId": 1097,
-              "chineseName": "中医科",
-              "childOrgs": null
-            }, {
-              "orgId": 1281,
-              "chineseName": "全科",
-              "childOrgs": null
-            }, {
-              "orgId": 1282,
-              "chineseName": "内科",
-              "childOrgs": null
-            }]
-          }, {
-            "orgId": 1093,
-            "chineseName": "药剂科",
-            "childOrgs": null
-          }, {
-            "orgId": 1094,
-            "chineseName": "预防保健科",
-            "childOrgs": null
-          }, {
-            "orgId": 1123,
-            "chineseName": "病房",
-            "childOrgs": null
-          }, {
-            "orgId": 1124,
-            "chineseName": "医政科",
-            "childOrgs": [{
-              "orgId": 1384,
-              "chineseName": "医政干事",
-              "childOrgs": null
-            }]
-          }, {
-            "orgId": 1125,
-            "chineseName": "医学影像科",
-            "childOrgs": [{
-              "orgId": 1182,
-              "chineseName": "超声科",
-              "childOrgs": null
-            }, {
-              "orgId": 1183,
-              "chineseName": "放射科",
-              "childOrgs": null
-            }]
-          }]
-        }, {
-          "orgId": 1136,
-          "chineseName": "运营部",
-          "childOrgs": null
-        }]
-      }, {
-        "orgId": 88,
-        "chineseName": "双二",
-        "childOrgs": [{
-          "orgId": 169,
-          "chineseName": "综合办公室",
-          "childOrgs": null
-        }, {
-          "orgId": 171,
-          "chineseName": "人力资源部",
-          "childOrgs": null
-        }, {
-          "orgId": 172,
-          "chineseName": "医务部",
-          "childOrgs": [{
-            "orgId": 974,
-            "chineseName": "功能检查科",
-            "childOrgs": [{
-              "orgId": 1371,
-              "chineseName": "心电图室",
-              "childOrgs": null
-            }, {
-              "orgId": 1372,
-              "chineseName": "超声室",
-              "childOrgs": null
-            }, {
-              "orgId": 1373,
-              "chineseName": "放射科",
-              "childOrgs": null
-            }, {
-              "orgId": 1374,
-              "chineseName": "功能室",
-              "childOrgs": null
-            }]
-          }, {
-            "orgId": 173,
-            "chineseName": "药房",
-            "childOrgs": null
-          }, {
-            "orgId": 183,
-            "chineseName": "检验科",
-            "childOrgs": null
-          }, {
-            "orgId": 119,
-            "chineseName": "病房",
-            "childOrgs": null
-          }, {
-            "orgId": 975,
-            "chineseName": "护理部",
-            "childOrgs": null
-          }, {
-            "orgId": 1313,
-            "chineseName": "门诊部",
-            "childOrgs": [{
-              "orgId": 167,
-              "chineseName": "门诊护士",
-              "childOrgs": null
-            }, {
-              "orgId": 168,
-              "chineseName": "综合门诊",
-              "childOrgs": null
-            }, {
-              "orgId": 977,
-              "chineseName": "消毒供应室",
-              "childOrgs": null
-            }, {
-              "orgId": 1321,
-              "chineseName": "妇科",
-              "childOrgs": null
-            }, {
-              "orgId": 1322,
-              "chineseName": "外科",
-              "childOrgs": null
-            }, {
-              "orgId": 1324,
-              "chineseName": "康复科",
-              "childOrgs": null
-            }, {
-              "orgId": 1315,
-              "chineseName": "中医科",
-              "childOrgs": null
-            }, {
-              "orgId": 1316,
-              "chineseName": "社区科",
-              "childOrgs": null
-            }, {
-              "orgId": 1317,
-              "chineseName": "理疗科",
-              "childOrgs": null
-            }, {
-              "orgId": 1318,
-              "chineseName": "口腔科",
-              "childOrgs": null
-            }, {
-              "orgId": 1320,
-              "chineseName": "五官科",
-              "childOrgs": null
-            }]
-          }, {
-            "orgId": 1314,
-            "chineseName": "医养结合科",
-            "childOrgs": [{
-              "orgId": 1323,
-              "chineseName": "医养结合-二福",
-              "childOrgs": null
-            }, {
-              "orgId": 1325,
-              "chineseName": "医养结合-双桥",
-              "childOrgs": null
-            }, {
-              "orgId": 1319,
-              "chineseName": "医养结合-双井",
-              "childOrgs": null
-            }]
-          }]
-        }, {
-          "orgId": 120,
-          "chineseName": "财务部",
-          "childOrgs": null
-        }, {
-          "orgId": 1367,
-          "chineseName": "院办",
-          "childOrgs": null
+          'orgId': 203,
+          'chineseName': '财务部',
+          'childOrgs': null
         }]
       }]
     }, {
-      "orgId": 1481,
-      "chineseName": "部门A",
-      "childOrgs": null
+      'orgId': 10,
+      'chineseName': '社区医疗事业部',
+      'childOrgs': [{
+        'orgId': 1015,
+        'chineseName': '人力资源部',
+        'childOrgs': null
+      }, {
+        'orgId': 77,
+        'chineseName': '居家医养项目部',
+        'childOrgs': [{
+          'orgId': 1294,
+          'chineseName': '居家服务组',
+          'childOrgs': null
+        }, {
+          'orgId': 1297,
+          'chineseName': '社区巡诊组',
+          'childOrgs': null
+        }, {
+          'orgId': 1298,
+          'chineseName': '政府项目组',
+          'childOrgs': null
+        }, {
+          'orgId': 1299,
+          'chineseName': '医养通运营组',
+          'childOrgs': null
+        }]
+      }, {
+        'orgId': 79,
+        'chineseName': '财务部',
+        'childOrgs': null
+      }, {
+        'orgId': 84,
+        'chineseName': '运营管理部',
+        'childOrgs': null
+      }, {
+        'orgId': 87,
+        'chineseName': '房山',
+        'childOrgs': [{
+          'orgId': 104,
+          'chineseName': '客服部',
+          'childOrgs': null
+        }, {
+          'orgId': 146,
+          'chineseName': '财务部',
+          'childOrgs': null
+        }, {
+          'orgId': 1047,
+          'chineseName': '医保部',
+          'childOrgs': null
+        }, {
+          'orgId': 109,
+          'chineseName': '人力资源部',
+          'childOrgs': null
+        }, {
+          'orgId': 110,
+          'chineseName': '市场部',
+          'childOrgs': null
+        }, {
+          'orgId': 113,
+          'chineseName': '办公室',
+          'childOrgs': null
+        }, {
+          'orgId': 115,
+          'chineseName': '信息办',
+          'childOrgs': null
+        }, {
+          'orgId': 122,
+          'chineseName': '院办',
+          'childOrgs': null
+        }, {
+          'orgId': 1087,
+          'chineseName': '医务部',
+          'childOrgs': [{
+            'orgId': 1090,
+            'chineseName': '护理部',
+            'childOrgs': null
+          }, {
+            'orgId': 1091,
+            'chineseName': '检验科',
+            'childOrgs': null
+          }, {
+            'orgId': 1092,
+            'chineseName': '门诊部',
+            'childOrgs': [{
+              'orgId': 1137,
+              'chineseName': '妇科',
+              'childOrgs': null
+            }, {
+              'orgId': 1138,
+              'chineseName': '全科／内科',
+              'childOrgs': null
+            }, {
+              'orgId': 1139,
+              'chineseName': '外科',
+              'childOrgs': null
+            }, {
+              'orgId': 1140,
+              'chineseName': '理疗科',
+              'childOrgs': null
+            }, {
+              'orgId': 1141,
+              'chineseName': '康复科',
+              'childOrgs': null
+            }, {
+              'orgId': 1095,
+              'chineseName': '儿科',
+              'childOrgs': null
+            }, {
+              'orgId': 1096,
+              'chineseName': '口腔科',
+              'childOrgs': null
+            }, {
+              'orgId': 1097,
+              'chineseName': '中医科',
+              'childOrgs': null
+            }, {
+              'orgId': 1281,
+              'chineseName': '全科',
+              'childOrgs': null
+            }, {
+              'orgId': 1282,
+              'chineseName': '内科',
+              'childOrgs': null
+            }]
+          }, {
+            'orgId': 1093,
+            'chineseName': '药剂科',
+            'childOrgs': null
+          }, {
+            'orgId': 1094,
+            'chineseName': '预防保健科',
+            'childOrgs': null
+          }, {
+            'orgId': 1123,
+            'chineseName': '病房',
+            'childOrgs': null
+          }, {
+            'orgId': 1124,
+            'chineseName': '医政科',
+            'childOrgs': [{
+              'orgId': 1384,
+              'chineseName': '医政干事',
+              'childOrgs': null
+            }]
+          }, {
+            'orgId': 1125,
+            'chineseName': '医学影像科',
+            'childOrgs': [{
+              'orgId': 1182,
+              'chineseName': '超声科',
+              'childOrgs': null
+            }, {
+              'orgId': 1183,
+              'chineseName': '放射科',
+              'childOrgs': null
+            }]
+          }]
+        }, {
+          'orgId': 1136,
+          'chineseName': '运营部',
+          'childOrgs': null
+        }]
+      }, {
+        'orgId': 88,
+        'chineseName': '双二',
+        'childOrgs': [{
+          'orgId': 169,
+          'chineseName': '综合办公室',
+          'childOrgs': null
+        }, {
+          'orgId': 171,
+          'chineseName': '人力资源部',
+          'childOrgs': null
+        }, {
+          'orgId': 172,
+          'chineseName': '医务部',
+          'childOrgs': [{
+            'orgId': 974,
+            'chineseName': '功能检查科',
+            'childOrgs': [{
+              'orgId': 1371,
+              'chineseName': '心电图室',
+              'childOrgs': null
+            }, {
+              'orgId': 1372,
+              'chineseName': '超声室',
+              'childOrgs': null
+            }, {
+              'orgId': 1373,
+              'chineseName': '放射科',
+              'childOrgs': null
+            }, {
+              'orgId': 1374,
+              'chineseName': '功能室',
+              'childOrgs': null
+            }]
+          }, {
+            'orgId': 173,
+            'chineseName': '药房',
+            'childOrgs': null
+          }, {
+            'orgId': 183,
+            'chineseName': '检验科',
+            'childOrgs': null
+          }, {
+            'orgId': 119,
+            'chineseName': '病房',
+            'childOrgs': null
+          }, {
+            'orgId': 975,
+            'chineseName': '护理部',
+            'childOrgs': null
+          }, {
+            'orgId': 1313,
+            'chineseName': '门诊部',
+            'childOrgs': [{
+              'orgId': 167,
+              'chineseName': '门诊护士',
+              'childOrgs': null
+            }, {
+              'orgId': 168,
+              'chineseName': '综合门诊',
+              'childOrgs': null
+            }, {
+              'orgId': 977,
+              'chineseName': '消毒供应室',
+              'childOrgs': null
+            }, {
+              'orgId': 1321,
+              'chineseName': '妇科',
+              'childOrgs': null
+            }, {
+              'orgId': 1322,
+              'chineseName': '外科',
+              'childOrgs': null
+            }, {
+              'orgId': 1324,
+              'chineseName': '康复科',
+              'childOrgs': null
+            }, {
+              'orgId': 1315,
+              'chineseName': '中医科',
+              'childOrgs': null
+            }, {
+              'orgId': 1316,
+              'chineseName': '社区科',
+              'childOrgs': null
+            }, {
+              'orgId': 1317,
+              'chineseName': '理疗科',
+              'childOrgs': null
+            }, {
+              'orgId': 1318,
+              'chineseName': '口腔科',
+              'childOrgs': null
+            }, {
+              'orgId': 1320,
+              'chineseName': '五官科',
+              'childOrgs': null
+            }]
+          }, {
+            'orgId': 1314,
+            'chineseName': '医养结合科',
+            'childOrgs': [{
+              'orgId': 1323,
+              'chineseName': '医养结合-二福',
+              'childOrgs': null
+            }, {
+              'orgId': 1325,
+              'chineseName': '医养结合-双桥',
+              'childOrgs': null
+            }, {
+              'orgId': 1319,
+              'chineseName': '医养结合-双井',
+              'childOrgs': null
+            }]
+          }]
+        }, {
+          'orgId': 120,
+          'chineseName': '财务部',
+          'childOrgs': null
+        }, {
+          'orgId': 1367,
+          'chineseName': '院办',
+          'childOrgs': null
+        }]
+      }]
+    }, {
+      'orgId': 1481,
+      'chineseName': '部门A',
+      'childOrgs': null
     }]
   }, {
-    "orgId": 1483,
-    "chineseName": "测试部",
-    "childOrgs": null
+    'orgId': 1483,
+    'chineseName': '测试部',
+    'childOrgs': null
   }]
 }]
-
