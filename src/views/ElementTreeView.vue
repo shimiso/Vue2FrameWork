@@ -43,61 +43,63 @@
   </div>
 </template>
 <script>
-  import { Drawer,Group, Cell, XButton, ViewBox, XHeader,Flexbox, FlexboxItem } from 'vux'
+import { Drawer, Group, Cell, XButton, ViewBox, XHeader, Flexbox, FlexboxItem } from 'vux'
 
-  import { mapGetters } from 'vuex'
-  export default {
-    components: {
-      Drawer,
-      ViewBox,
-      XHeader,
-      Group,
-      Cell,
-      XButton,Flexbox, FlexboxItem
-    },
-    data() {
-      return {
-        // data: [],
-        drawerVisibility: false,
-        defaultProps: {
-          children: 'childOrgs',
-          label: 'chineseName'
-        },
-        isShow:false,
-        selectData:{
-          data:{},
-          selfIsSelected:false,
-          childrenHasSelected:false
-        }
-      };
-    },
-    created() {
-      this.$store.dispatch('OrgStructTree/getOrgStruct')
-    },
-    computed:{
-      ...mapGetters('OrgStructTree',{
-        data:'getOrgStruct'
-      }),
-      isShowNav () {
-        if (window.location.href.indexOf('hide-nav') > -1) {
-          return false
-        }
-        return true
+import { mapGetters } from 'vuex'
+export default {
+  components: {
+    Drawer,
+    ViewBox,
+    XHeader,
+    Group,
+    Cell,
+    XButton,
+    Flexbox,
+    FlexboxItem
+  },
+  data () {
+    return {
+      // data: [],
+      drawerVisibility: false,
+      defaultProps: {
+        children: 'childOrgs',
+        label: 'chineseName'
       },
-    },
-    methods: {
-      handleNodeClick(data,node,indeterminate) {
-        //传递给 data 属性的数组中该节点所对应的对象、节点对应的 Node、节点组件本身。
-        console.log(data);
-      },
-      handleCheckChange(data, checked, indeterminate) {//复选框选中事件
-        //共三个参数，依次为：传递给 data 属性的数组中该节点所对应的对象、节点本身是否被选中、节点的子树中是否有被选中的节点
-        this.selectData.data = data
-        this.selectData.selfIsSelected = checked
-        this.selectData.childrenHasSelected = indeterminate
+      isShow: false,
+      selectData: {
+        data: {},
+        selfIsSelected: false,
+        childrenHasSelected: false
       }
     }
-  };
+  },
+  created () {
+    this.$store.dispatch('OrgStructTree/getOrgStruct')
+  },
+  computed: {
+    ...mapGetters('OrgStructTree', {
+      data: 'getOrgStruct'
+    }),
+    isShowNav () {
+      if (window.location.href.indexOf('hide-nav') > -1) {
+        return false
+      }
+      return true
+    }
+  },
+  methods: {
+    handleNodeClick (data, node, indeterminate) {
+      // 传递给 data 属性的数组中该节点所对应的对象、节点对应的 Node、节点组件本身。
+      console.log(data)
+    },
+    handleCheckChange (data, checked, indeterminate) { // 复选框选中事件
+      // 共三个参数，依次为：传递给 data 属性的数组中该节点所对应的对象、节点本身是否被选中、节点的子树中是否有被选中的节点
+      this.selectData.data = data
+      this.selectData.selfIsSelected = checked
+      this.selectData.childrenHasSelected = indeterminate
+    }
+  }
+}
 </script>fit
 
 <style lang="less">

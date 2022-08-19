@@ -316,7 +316,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "src/style/mixin";
+  @import "../style/mixin";
   /*section{*/
     /*height: 1rem;*/
     /*vertical-align: middle;*/

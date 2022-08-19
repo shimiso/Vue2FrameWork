@@ -59,7 +59,7 @@ export default new Router({
     },
     {
       path: '/dropDownFilterList',
-      component: resolve => require(['../views/drop-down-filter-list/DropDownFilterList.vue'], resolve)
+      component: resolve => require(['../views/dropDownFilterList.vue'], resolve)
     },
     {
       path: '/mescrollOptions',
