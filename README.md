@@ -9,7 +9,7 @@ node -v14.20.0
 
 所有围绕[vux](https://github.com/airyland/vux)工具都已经升级到最新最稳定版本  
 注意：
-vux依赖的vux-loader只支持到webpack3，webpack4、5版本采用@vux/loader v2.1.1支持
+vux依赖的vux-loader只支持到webpack3，webpack4、5版本采用@vux/loader v2.1.1支持  
 给还在基于vux开发的项目最后一点助力    
 
 特此感谢以下诸位大神的接力维护  
