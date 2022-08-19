@@ -11,7 +11,6 @@
 <script>
 import crypto from 'crypto'
 import {XButton, Box, XHeader} from 'vux'
-
 export default {
   data () {
     return {

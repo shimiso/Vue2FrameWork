@@ -318,7 +318,7 @@ canvas {
   background: transparent;
   border-radius: 4px;
   padding: 5px 10px;
-  width: 60px;
+  width: 100px;
   outline: none;
 }
 
@@ -328,7 +328,7 @@ canvas {
   color: #fff;
   border-radius: 4px;
   padding: 5px 10px;
-  width: 60px;
+  width: 100px;
   outline: none;
 }
 
