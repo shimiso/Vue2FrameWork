@@ -1,4 +1,4 @@
-# vuxdemo
+# Vue2FrameWork
 
 ## Project setup
 ```
