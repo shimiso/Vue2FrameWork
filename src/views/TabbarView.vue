@@ -1,7 +1,8 @@
 <template>
   <div style="height:100%;">
-    <x-header :left-options="{backText: ''}"
+    <x-header :left-options="{showBack: true,backText: '',preventGoBack:true}"
               :right-options="{showMore: true}"
+              @on-click-back="backBtn"
               @on-click-more="showMenu = true">TabbarView</x-header>
 
     <!-- remember to import BusPlugin in main.js if you use components: x-img and sticky -->
@@ -50,25 +51,13 @@ export default {
     Actionsheet
   },
   methods: {
+    backBtn(){
+      this.$router.push('/')
+    },
     changeLocale (key, text) {
       console.log(key)
       this.$i18n.set(key)
       this.$locale.set(key)
-    }
-  },
-  watch: {
-    path (path) {
-      if (path === '/demo') {
-        setTimeout(() => {
-          this.box = document.querySelector('#demo_list_box')
-          if (this.box) {
-            this.box.removeEventListener('scroll', this.handler, false)
-            this.box.addEventListener('scroll', this.handler, false)
-          }
-        }, 1000)
-      } else {
-        this.box && this.box.removeEventListener('scroll', this.handler, false)
-      }
     }
   },
   computed: {

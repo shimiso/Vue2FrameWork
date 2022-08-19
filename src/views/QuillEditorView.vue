@@ -1,5 +1,6 @@
 <template>
       <div>
+        <x-header :left-options="{showBack: true,backText: ''}">Quill-editor</x-header>
         <!-- quill-editor -->
         <quill-editor v-model="content"
                       :options="editorOption"
@@ -10,6 +11,7 @@
       </div>
 </template>
 <script>
+  import {XHeader} from 'vux'
   import 'quill/dist/quill.core.css'
   import 'quill/dist/quill.snow.css'
   import 'quill/dist/quill.bubble.css'
@@ -32,7 +34,7 @@
 
   export default {
     components: {
-      quillEditor
+      quillEditor,XHeader
     },
     data() {
       return {

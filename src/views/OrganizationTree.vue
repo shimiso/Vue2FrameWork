@@ -1,12 +1,13 @@
 
 <template>
   <div>
+    <x-header :left-options="{showBack: true,backText: ''}">组织架构图</x-header>
     <div style="overflow:scroll;min-height:100vh;width:100vw;background:#fff;" class="container">
       <div class="col-md-10 col-md-offset-1">
         <div class="page-header">
-          <h2 style="text-align: center; margin: 20px;font-size: 24px;">乐成组织架构图</h2>
+          <h2 style="text-align: center; margin: 20px;font-size: 24px;">组织架构图</h2>
         </div>
-        <!-- <div class="row">
+        <div class="row">
           <div class="col-md-8 col-md-offset-2">
             <form class="form-horizontal row">
               <div class="col-md-4">
@@ -63,7 +64,7 @@
               </div>
             </form>
           </div>
-        </div> -->
+        </div>
         <p><br></p>
         <div class="text-center">
           <vue2-org-tree name="test"
@@ -82,7 +83,12 @@
 </template>
 <script>
 import {org} from '../../static/js/org.js'
+import Vue2OrgTree from 'vue2-org-tree'
+import {XHeader} from 'vux'
 export default {
+  components: {
+    XHeader,Vue2OrgTree
+  },
   data () {
     return {
       data: {
@@ -143,11 +149,9 @@ export default {
   },
   methods: {
     renderContent (h, data) {
-      console.log(h(), data, '-----1111111111111111')
       return data.label
     },
     onExpand (data) {
-      console.log('1111111', data, '-----')
       if ('expand' in data) {
         data.expand = !data.expand
         if (!data.expand && data.children) {
@@ -191,11 +195,10 @@ export default {
   },
   mounted () {
     this.data = org[0]
-    console.log(org, '==============------------')
   }
 }
 </script>
-<style>
+<style scoped>
 .org-tree-node-label {
   white-space: nowrap;
 }
