@@ -14,16 +14,16 @@ import 'lib-flexible/flexible'
 import { LocalePlugin, AlertPlugin, BusPlugin, ConfigPlugin, ToastPlugin, ConfirmPlugin, LoadingPlugin } from 'vux'
 import 'babel-polyfill'
 import Es6Promise from 'es6-promise'
-import { Tree } from 'element-ui';
+import { Tree } from 'element-ui'
 import preview from 'vue-photo-preview'
 import 'vue-photo-preview/dist/skin.css'
 
-import Vue2OrgTree from 'vue2-org-tree';
+import Vue2OrgTree from 'vue2-org-tree'
 Vue.use(Vue2OrgTree)
-var options={
-  fullscreenEl:false //关闭全屏按钮
+var options = {
+  fullscreenEl: false // 关闭全屏按钮
 }
-Vue.use(preview,options)
+Vue.use(preview, options)
 // 需要注意的是axios是基于Promise的，因此如果你需要兼容低版本浏览器(caniuse)，需要引入polyfill。
 // Polyfill 推荐使用 es6-promise
 require('es6-promise').polyfill()
@@ -38,7 +38,7 @@ Vue.use(AlertPlugin)
 Vue.use(LoadingPlugin)
 Vue.use(AlertPlugin)
 Vue.use(BusPlugin)
-Vue.use(Tree);
+Vue.use(Tree)
 // 公用的弹窗(全局变量)
 Vue.prototype.showToast = function (text, width) {
   Vue.$vux.toast.show({
@@ -156,11 +156,8 @@ router.afterEach(function (to) {
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
-  store,
-  el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
-})
+  store,
+  render: h => h(App)
+}).$mount('#app')

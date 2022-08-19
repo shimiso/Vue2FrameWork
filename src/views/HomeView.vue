@@ -50,35 +50,35 @@
 </template>
 
 <script>
-  import {Group, Cell,XHeader, TransferDomDirective as TransferDom} from 'vux'
+import {Group, Cell, XHeader, TransferDomDirective as TransferDom} from 'vux'
 
-  export default {
-    directives: {
-      TransferDom
-    },
-    components: {
-      Group,
-      Cell,
-      XHeader
-    },
-    data() {
-      return {
-        evenBusData:''
-      }
-    },
-    methods: {
-      evenBusTest(params){
-        this.evenBusData = params
-        console.log(params)
-      }
-    },
-    created () {
-      this.$vux && this.$vux.bus && this.$vux.bus.$on('vux:evenBusTest',  this.evenBusTest)
-    },
-    beforeDestroy () {
-      this.$vux && this.$vux.bus && this.$vux.bus.$off('vux:evenBusTest', this.evenBusTest)
-    },
+export default {
+  directives: {
+    TransferDom
+  },
+  components: {
+    Group,
+    Cell,
+    XHeader
+  },
+  data () {
+    return {
+      evenBusData: ''
+    }
+  },
+  methods: {
+    evenBusTest (params) {
+      this.evenBusData = params
+      console.log(params)
+    }
+  },
+  created () {
+    this.$vux && this.$vux.bus && this.$vux.bus.$on('vux:evenBusTest', this.evenBusTest)
+  },
+  beforeDestroy () {
+    this.$vux && this.$vux.bus && this.$vux.bus.$off('vux:evenBusTest', this.evenBusTest)
   }
+}
 </script>
 
 <style scoped>
